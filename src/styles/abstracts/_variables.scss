@@ -1,0 +1,39 @@
+@use 'functions';
+
+$prussian-blue: #002f52;
+$asn-marino-color: #326589;
+$ryb-orange: #eb9b00;
+$onyx-gray: #474646;
+$white: #fff;
+
+$font-family: 'Poppins', 'sans-serif';
+
+$icomoon-font-family: 'icomoon' !default;
+$icomoon-font-path: 'fonts' !default;
+
+$icon-bag: '\e900';
+$icon-mail: '\e901';
+$icon-heart: '\e902';
+$icon-profile: '\e903';
+$icon-search: '\e904';
+$icon-Menu: '\e905';
+
+$breakpoints: (
+    'small': (
+        min-width: 428px,
+    ),
+    'medium': (
+        min-width: 1024px,
+    ),
+    'large': (
+        min-width: 1728px,
+    ),
+) !default;
+
+$btn-padding-mobile: rem(24) rem(16);
+$btn-padding-tablet: rem(32) rem(24);
+$btn-padding-desktop: rem(32) rem(24);
+
+$btn-font-mobile: rem(14);
+$btn-font-tablet: rem(24);
+$btn-font-desktop: rem(24);

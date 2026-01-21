@@ -1,0 +1,22 @@
+@use '../abstracts' as vars;
+
+.btn {
+    display: inline-block;
+    border: none;
+    background-color: vars.$ryb-orange;
+    color: vars.$white;
+    cursor: pointer;
+
+    font-size: vars.$btn-font-mobile;
+    padding: vars.$btn-padding-mobile;
+
+    @include respond-to('medium') {
+        font-size: vars.$btn-font-tablet;
+        padding: vars.$btn-padding-tablet;
+    }
+
+    @include respond-to('large') {
+        font-size: vars.$btn-font-desktop;
+        padding: vars.$btn-padding-desktop;
+    }
+}
