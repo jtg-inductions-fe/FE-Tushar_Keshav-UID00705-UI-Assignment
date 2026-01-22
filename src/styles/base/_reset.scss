@@ -41,6 +41,7 @@ section {
     font: inherit;
     vertical-align: baseline;
 }
+
 article,
 aside,
 details,
@@ -52,17 +53,21 @@ nav,
 section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
+
 ol,
 ul {
     list-style: none;
 }
+
 blockquote,
 q {
     quotes: none;
 }
+
 input,
 button,
 textarea,

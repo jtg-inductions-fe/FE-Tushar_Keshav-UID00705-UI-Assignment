@@ -1,10 +1,17 @@
 @use '../abstracts' as vars;
-@use '../abstracts/mixins' as *;
+
+$btn-padding-mobile: vars.px-to-rem(48) vars.px-to-rem(32);
+$btn-padding-tablet: vars.px-to-rem(64) vars.px-to-rem(48);
+$btn-padding-desktop: vars.px-to-rem(64) vars.px-to-rem(48);
+
+$btn-font-mobile: vars.px-to-rem(14);
+$btn-font-tablet: vars.px-to-rem(24);
+$btn-font-desktop: vars.px-to-rem(24);
 
 .btn {
     display: inline-block;
     border: none;
-    background-color: vars.$ryb-orange;
+    background-color: vars.$orange-500;
     color: vars.$white;
     cursor: pointer;
 

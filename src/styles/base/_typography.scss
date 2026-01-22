@@ -23,9 +23,10 @@ h2 {
         font-size: vars.$size-2xl-desktop;
     }
 }
+
 h3 {
     font-size: vars.$size-md-mobile;
-    font-weight: vars.$bold;
+    font-weight: vars.$weight-bold;
     @include mx.breakpoint('medium') {
         font-size: vars.$size-body-tablet;
     }
@@ -51,6 +52,7 @@ h3 {
         font-size: vars.$size-body-tablet;
     }
 }
+
 .labels {
     font-size: vars.$size-sm-mobile;
     font-weight: vars.$weight-light;
