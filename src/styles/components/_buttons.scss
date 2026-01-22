@@ -1,4 +1,5 @@
 @use '../abstracts' as vars;
+@use '../abstracts/mixins' as *;
 
 .btn {
     display: inline-block;
@@ -10,12 +11,12 @@
     font-size: vars.$btn-font-mobile;
     padding: vars.$btn-padding-mobile;
 
-    @include respond-to('medium') {
+    @include breakpoint('medium') {
         font-size: vars.$btn-font-tablet;
         padding: vars.$btn-padding-tablet;
     }
 
-    @include respond-to('large') {
+    @include breakpoint('large') {
         font-size: vars.$btn-font-desktop;
         padding: vars.$btn-padding-desktop;
     }

@@ -1,0 +1,29 @@
+@use '../abstracts/variables' as vars;
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: vars.$weight-regular;
+    src: url('public/assets/fonts/Poppins-Regular.woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: bold;
+    font-weight: vars.$weight-bold;
+    src: url('public/assets/fonts/Poppins-Bold.woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: medium;
+    font-weight: vars.$weight-semibold;
+    src: url('public/assets/fonts/Poppins-Medium.woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: light;
+    font-weight: vars.$weight-regular;
+    src: url('public/assets/fonts/Poppins-Light.woff2');
+}

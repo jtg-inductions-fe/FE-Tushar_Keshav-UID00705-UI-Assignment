@@ -1,15 +1,46 @@
-@use 'functions';
+@use 'functions' as *;
 
-$prussian-blue: #002f52;
-$asn-marino-color: #326589;
-$ryb-orange: #eb9b00;
-$onyx-gray: #474646;
+// colors
+$color-primary: #002f52;
+$orange-500: #eb9b00;
+$gray-200: #ebecee;
+$white: #ffffff;
+$black: #000000;
 $white: #fff;
 
-$font-family: 'Poppins', 'sans-serif';
+$base-font-size: 16px;
+
+// font-family
+$font-family: 'Poppins', sans-serif;
+
+// font weights
+$weight-bold: 700;
+$weight-regular: 400;
+$weight-semibold: 500;
+$weight-light: 300;
+
+// font-size
+$size-sm-mobile: px-to-rem(14px);
+$size-md-mobile: px-to-rem(14px);
+$size-lg-mobile: px-to-rem(18px);
+
+$size-label-tablet: px-to-rem(14px);
+$size-body-tablet: px-to-rem(16px);
+$size-md-tablet: px-to-rem(18px);
+$size-lg-tablet: px-to-rem(26px);
+$size-xl-tablet: px-to-rem(24px);
+$size-2xl-tablet: px-to-rem(36px);
+
+$size-label-desktop: px-to-rem(14px);
+$size-body-desktop: px-to-rem(16px);
+$size-md-desktop: px-to-rem(18px);
+$size-lg-desktop: px-to-rem(26px);
+$size-xl-desktop: px-to-rem(24px);
+$size-2xl-desktop: px-to-rem(32px);
+$size-3xl-desktop: px-to-rem(36px);
 
 $icomoon-font-family: 'icomoon' !default;
-$icomoon-font-path: 'fonts' !default;
+$icomoon-font-path: '/assets/fonts' !default;
 
 $icon-bag: '\e900';
 $icon-mail: '\e901';
@@ -30,10 +61,10 @@ $breakpoints: (
     ),
 ) !default;
 
-$btn-padding-mobile: rem(24) rem(16);
-$btn-padding-tablet: rem(32) rem(24);
-$btn-padding-desktop: rem(32) rem(24);
+$btn-padding-mobile: px-to-rem(48) px-to-rem(32);
+$btn-padding-tablet: px-to-rem(64) px-to-rem(48);
+$btn-padding-desktop: px-to-rem(64) px-to-rem(48);
 
-$btn-font-mobile: rem(14);
-$btn-font-tablet: rem(24);
-$btn-font-desktop: rem(24);
+$btn-font-mobile: px-to-rem(14);
+$btn-font-tablet: px-to-rem(24);
+$btn-font-desktop: px-to-rem(24);
