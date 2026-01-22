@@ -11,20 +11,20 @@ $btn-font-desktop: vars.px-to-rem(24);
 .btn {
     display: inline-block;
     border: none;
-    background-color: vars.$orange-500;
-    color: vars.$white;
+    background-color: $orange-500;
+    color: $white;
     cursor: pointer;
 
-    font-size: vars.$btn-font-mobile;
-    padding: vars.$btn-padding-mobile;
+    font-size: $btn-font-mobile;
+    padding: $btn-padding-mobile;
 
     @include breakpoint('medium') {
-        font-size: vars.$btn-font-tablet;
-        padding: vars.$btn-padding-tablet;
+        font-size: $btn-font-tablet;
+        padding: $btn-padding-tablet;
     }
 
     @include breakpoint('large') {
-        font-size: vars.$btn-font-desktop;
-        padding: vars.$btn-padding-desktop;
+        font-size: $btn-font-desktop;
+        padding: $btn-padding-desktop;
     }
 }
