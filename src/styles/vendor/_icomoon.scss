@@ -35,35 +35,34 @@
 
 .icon-bag {
     &:before {
-        content: $icon-bag;
-        color: #002f52;
+        content: '\e900';
     }
 }
 .icon-mail {
     &:before {
-        content: $icon-mail;
+        content: '\e901';
     }
 }
 .icon-heart {
     &:before {
-        content: $icon-heart;
+        content: '\e902';
     }
 }
 .icon-profile {
     &:before {
-        content: $icon-profile;
+        content: '\e903';
         color: #002f52;
     }
 }
 .icon-search {
     &:before {
-        content: $icon-search;
+        content: '\e904';
         color: #fff;
     }
 }
 .icon-Menu {
     &:before {
-        content: $icon-Menu;
+        content: '\e905';
         color: #002f52;
     }
 }
