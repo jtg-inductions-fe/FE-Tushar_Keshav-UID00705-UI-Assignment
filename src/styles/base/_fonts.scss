@@ -4,26 +4,33 @@
     font-family: 'Poppins';
     font-style: normal;
     font-weight: vars.$weight-regular;
-    src: url('/assets/fonts/Poppins-Regular.woff2');
+    src: url('/assets/fonts/poppins/Poppins-Regular.woff2');
 }
 
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: vars.$weight-bold;
-    src: url('/assets/fonts/Poppins-Bold.woff2');
+    src: url('/assets/fonts/poppins/Poppins-Bold.woff2');
 }
 
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: vars.$weight-semibold;
-    src: url('/assets/fonts/Poppins-Medium.woff2');
+    src: url('/assets/fonts/poppins/Poppins-Medium.woff2');
 }
 
 @font-face {
     font-family: 'Poppins';
     font-style: normal;
     font-weight: vars.$weight-light;
-    src: url('/assets/fonts/Poppins-Light.woff2');
+    src: url('/assets/fonts/poppins/Poppins-Light.woff2');
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: vars.$weight-bold;
+    src: url('/assets/fonts/josefin-sans/JosefinSans-Bold.woff2');
 }

@@ -10,7 +10,7 @@ $black: #000000;
 $base-font-size: 16px;
 
 // font-family
-$font-family: 'Poppins', sans-serif;
+$font-family: 'Poppins', 'Josefin Sans', sans-serif;
 
 // font weights
 $weight-bold: 700;
@@ -39,7 +39,7 @@ $size-2xl-desktop: px-to-rem(32px);
 $size-3xl-desktop: px-to-rem(36px);
 
 $icomoon-font-family: 'icomoon';
-$icomoon-font-path: '/assets/fonts';
+$icomoon-font-path: '/assets/fonts/icomoon';
 
 $breakpoints: (
     'small': (
