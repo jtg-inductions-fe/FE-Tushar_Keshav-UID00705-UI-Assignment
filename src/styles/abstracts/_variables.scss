@@ -5,8 +5,12 @@ $gray-200: #ebecee;
 $white: #ffffff;
 $black: #000000;
 
-/// font-family
-$font-family: 'Poppins', 'Josefin Sans', sans-serif;
+// gradient
+$primary-gradient: linear-gradient(97.54deg, #002f52 35.49%, #326589 165.37%);
+
+// font-family
+$font-family: 'Poppins', sans-serif;
+$font-brand: 'Josefin Sans', sans-serif;
 
 /// font weights
 $weight-bold: 700;
