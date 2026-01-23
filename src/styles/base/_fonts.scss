@@ -31,7 +31,7 @@
 @font-face {
     font-family: 'Josefin Sans';
     font-style: normal;
-    font-weight: 700;
+    font-weight: vars.$weight-bold;
     src: url('/assets/fonts/josefin-sans/JosefinSans-Bold.woff2')
         format('woff2');
 }
@@ -39,7 +39,7 @@
 @font-face {
     font-family: 'Josefin Sans';
     font-style: normal;
-    font-weight: 400;
+    font-weight: vars.$weight-regular;
     src: url('/assets/fonts/josefin-sans/JosefinSans-Regular.woff2')
         format('woff2');
 }
