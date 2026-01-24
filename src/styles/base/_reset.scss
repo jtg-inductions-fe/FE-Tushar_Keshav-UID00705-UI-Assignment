@@ -86,6 +86,8 @@ button {
     background-color: transparent;
     border-radius: 0;
     border: none;
+    all: unset;
+    outline: revert;
 }
 
 textarea {
