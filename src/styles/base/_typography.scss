@@ -4,6 +4,7 @@
 body {
     font-size: vars.$size-sm-mobile;
     font-weight: vars.$weight-regular;
+    font-family: vars.$font-family;
     @include mx.breakpoint('medium') {
         font-size: vars.$size-body-tablet;
     }
@@ -25,9 +26,10 @@ h1 {
 h2 {
     font-size: vars.$size-lg-mobile;
     font-weight: vars.$weight-bold;
+    font-family: vars.$font-family;
 
     @include mx.breakpoint('medium') {
-        font-size: vars.$size-lg-tablet;
+        font-size: vars.$size-xl-tablet;
     }
     @include mx.breakpoint('large') {
         font-size: vars.$size-2xl-desktop;
@@ -68,6 +70,6 @@ h3 {
     font-weight: vars.$weight-light;
 
     @include mx.breakpoint('medium') {
-        font-size: vars.$size-sm-tablet;
+        font-size: vars.$size-sm-mobile;
     }
 }
