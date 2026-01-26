@@ -1,0 +1,31 @@
+@use 'variables' as *;
+
+/// Applies styles at a specific screen size (breakpoint)
+/// @param {String} $breakpoint - Key from the $breakpoints map (e.g., small, medium)
+/// @content The CSS rules to wrap inside the media query
+@mixin breakpoint($breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+        @content;
+    }
+}
+
+/// Master Flexbox manager that combines display, alignment, and spacing.
+///
+/// @param $display-mode - for setting the flex display
+/// @param $justify-content - for setting the arrangment over main-axis
+/// @param $align-items - for setting the arrangement over cross-axis
+/// @param flex-direction - for setting the direction of flex item
+/// @param $gap-value - for setting the spacing between items
+@mixin flex-box(
+    $display-mode: flex,
+    $justify-content: flex-start,
+    $align-items: stretch,
+    $flex-direction: row,
+    $gap-value: 0px
+) {
+    display: $display-mode;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+    gap: $gap-value;
+}

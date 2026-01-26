@@ -1,0 +1,54 @@
+/// colors
+$color-primary: #002f52;
+$orange-500: #eb9b00;
+$gray-200: #ebecee;
+$white: #ffffff;
+$black: #000000;
+
+/// font-family
+$font-family: 'Poppins', 'Josefin Sans', sans-serif;
+
+/// font weights
+$weight-bold: 700;
+$weight-regular: 400;
+$weight-semibold: 500;
+$weight-light: 300;
+
+/// font-size
+$size-sm-mobile: px-to-rem(14px);
+$size-md-mobile: px-to-rem(16px);
+$size-lg-mobile: px-to-rem(18px);
+
+$size-label-tablet: px-to-rem(14px);
+$size-body-tablet: px-to-rem(16px);
+$size-md-tablet: px-to-rem(18px);
+$size-lg-tablet: px-to-rem(24px);
+$size-xl-tablet: px-to-rem(26px);
+$size-2xl-tablet: px-to-rem(36px);
+
+$size-label-desktop: px-to-rem(14px);
+$size-body-desktop: px-to-rem(16px);
+$size-md-desktop: px-to-rem(18px);
+$size-lg-desktop: px-to-rem(24px);
+$size-xl-desktop: px-to-rem(26px);
+$size-2xl-desktop: px-to-rem(32px);
+$size-3xl-desktop: px-to-rem(36px);
+
+$icomoon-font-family: 'icomoon';
+$icomoon-font-path: '/assets/fonts/icomoon';
+
+/// Breakpoint maps
+$breakpoints: (
+    'small': (
+        min-width: 428px,
+    ),
+    'medium': (
+        min-width: 1024px,
+    ),
+    'large': (
+        min-width: 1400px,
+    ),
+    'extra-large': (
+        min-width: 1728px,
+    ),
+);

@@ -1,0 +1,43 @@
+@use '../abstracts/variables' as vars;
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: vars.$weight-regular;
+    src: url('/assets/fonts/poppins/Poppins-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: vars.$weight-bold;
+    src: url('/assets/fonts/poppins/Poppins-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: vars.$weight-semibold;
+    src: url('/assets/fonts/poppins/Poppins-Medium.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: vars.$weight-light;
+    src: url('/assets/fonts/poppins/Poppins-Light.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 700;
+    src: url('assets/fonts/josefin-sans/JosefinSans-Bold.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Josefin Sans';
+    font-style: normal;
+    font-weight: 400;
+    src: url('assets/fonts/josefin-sans/JosefinSans-Bold.woff2') format('woff2');
+}

@@ -1,0 +1,73 @@
+@use '../abstracts/variables' as vars;
+@use '../abstracts/mixins' as mx;
+
+body {
+    font-size: vars.$size-sm-mobile;
+    font-weight: vars.$weight-regular;
+    @include mx.breakpoint('medium') {
+        font-size: vars.$size-body-tablet;
+    }
+    @include mx.breakpoint('large') {
+        font-size: vars.$size-body-desktop;
+    }
+}
+
+h1 {
+    font-size: vars.$size-lg-mobile;
+    font-weight: vars.$weight-bold;
+    font-family: vars.$font-family;
+
+    @include mx.breakpoint('medium') {
+        font-size: vars.$size-2xl-tablet;
+    }
+}
+
+h2 {
+    font-size: vars.$size-lg-mobile;
+    font-weight: vars.$weight-bold;
+
+    @include mx.breakpoint('medium') {
+        font-size: vars.$size-lg-tablet;
+    }
+    @include mx.breakpoint('large') {
+        font-size: vars.$size-2xl-desktop;
+    }
+}
+
+h3 {
+    font-size: vars.$size-md-mobile;
+    font-weight: vars.$weight-bold;
+    @include mx.breakpoint('medium') {
+        font-size: vars.$size-body-tablet;
+    }
+    @include mx.breakpoint('large') {
+        font-size: vars.$size-2xl-desktop;
+    }
+}
+
+.subheading {
+    font-size: vars.$size-lg-mobile;
+    font-weight: vars.$weight-bold;
+
+    @include mx.breakpoint('medium') {
+        font-size: vars.$size-md-tablet;
+    }
+}
+
+.supporting-text {
+    font-size: vars.$size-sm-mobile;
+    font-weight: vars.$weight-light;
+
+    @include mx.breakpoint('medium') {
+        font-size: vars.$size-body-tablet;
+    }
+}
+
+.labels {
+    font-size: vars.$size-sm-mobile;
+    font-weight: vars.$weight-light;
+
+    @include mx.breakpoint('medium') {
+        font-size: vars.$size-sm-tablet;
+    }
+}
