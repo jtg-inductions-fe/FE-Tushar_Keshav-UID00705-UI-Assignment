@@ -20,11 +20,10 @@
 }
 
 /// Master Flexbox manager that combines display, alignment, and spacing.
-///
 /// @param $display-mode - for setting the flex display
 /// @param $justify-content - for setting the arrangment over main-axis
 /// @param $align-items - for setting the arrangement over cross-axis
-/// @param flex-directions - for setting the direction of flex item
+/// @param flex-direction - for setting the direction of flex item
 /// @param $gap-value - for setting the spacing between items
 @mixin flex-box(
     $display-mode: flex,
