@@ -25,14 +25,11 @@
         align-items: center;
         justify-content: center;
         gap: vars.px-to-rem(24px);
-        gap: vars.px-to-rem(24px);
     }
     &__hamburger {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: vars.px-to-rem(28px) vars.px-to-rem(22px) vars.px-to-rem(28px)
-            vars.px-to-rem(22px);
         padding: vars.px-to-rem(28px) vars.px-to-rem(22px) vars.px-to-rem(28px)
             vars.px-to-rem(22px);
         @include vars.breakpoint('medium') {
@@ -71,8 +68,9 @@
     }
     &__nav {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 100%;
+        background-color: vars.$white;
+
         @include vars.breakpoint('medium') {
             position: static;
         }
@@ -205,8 +203,4 @@
         font-weight: vars.$weight-regular;
         font-size: vars.px-to-rem(30px);
     }
-}
-
-.logo-img {
-    margin: 0 vars.px-to-rem(12px);
 }
