@@ -1,92 +1,102 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title>Title</title>
+        <title>AluraBooks</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="src/styles/main.scss" />
     </head>
     <body>
-        <header class="header">
-            <div class="header__container">
-                <div class="header__group">
-                    <div class="header__hamburger">
-                        <span class="icon-Menu"></span>
-                    </div>
-                    <div class="header__brand">
-                        <img
-                            class="logo-img"
-                            src="assets/images/brand-logo.png"
-                            alt="brand-logo"
-                            width="40px"
-                            height="40px"
-                        />
-                        <div class="brand">
-                            <span class="brand-name">Alura</span>
-                            <span class="brand-type">Books</span>
+        <div class="container">
+            <header class="header">
+                <div class="header__container">
+                    <div class="header__group">
+                        <div class="header__hamburger">
+                            <span class="icon-Menu"></span>
+                        </div>
+                        <div class="header__brand">
+                            <img
+                                class="logo-img"
+                                src="assets/images/brand-logo.png"
+                                alt="brand-logo"
+                                width="40px"
+                                height="40px"
+                            />
+                            <div class="brand-name">
+                                <span class="brand-name__first-word"
+                                    >Alura</span
+                                >
+                                <span class="brand-name__second-word"
+                                    >Books</span
+                                >
+                            </div>
                         </div>
                     </div>
+                    <nav class="header__nav" aria-label="Menu">
+                        <ul class="main-menu">
+                            <li class="main-menu__item has-sub-menu is-open">
+                                <a href="#" class="main-menu__link categories"
+                                    >CATEGORIAS</a
+                                >
+                                <ul class="sub-menu">
+                                    <li class="sub-menu__item">
+                                        <a href="#" class="sub-menu__link"
+                                            >PROGRAMAÇÃO</a
+                                        >
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="#" class="sub-menu__link"
+                                            >FRONT-END</a
+                                        >
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="#" class="sub-menu__link"
+                                            >INFRAESTRUTURA</a
+                                        >
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="#" class="sub-menu__link"
+                                            >BUSINESS</a
+                                        >
+                                    </li>
+                                    <li class="sub-menu__item">
+                                        <a href="#" class="sub-menu__link"
+                                            >DESIGN & UX</a
+                                        >
+                                    </li>
+                                </ul>
+                            </li>
+                            <li
+                                class="main-menu__item main-menu__item--favoritos"
+                            >
+                                <a href="#" class="main-menu__link"
+                                    >FAVORITOS</a
+                                >
+                            </li>
+                            <li class="main-menu__item">
+                                <a href="#" class="main-menu__link"
+                                    >MINHA ESTANTE</a
+                                >
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
-                <nav class="header__nav" aria-label="Menu">
-                    <ul class="main-menu">
-                        <li class="main-menu__item has-sub-menu is-open">
-                            <a href="#" class="main-menu__link categories"
-                                >CATEGORIAS</a
-                            >
-                            <ul class="sub-menu">
-                                <li class="sub-menu__item">
-                                    <a href="#" class="sub-menu__link"
-                                        >PROGRAMAÇÃO</a
-                                    >
-                                </li>
-                                <li class="sub-menu__item">
-                                    <a href="#" class="sub-menu__link"
-                                        >FRONT-END</a
-                                    >
-                                </li>
-                                <li class="sub-menu__item">
-                                    <a href="#" class="sub-menu__link"
-                                        >INFRAESTRUTURA</a
-                                    >
-                                </li>
-                                <li class="sub-menu__item">
-                                    <a href="#" class="sub-menu__link"
-                                        >BUSINESS</a
-                                    >
-                                </li>
-                                <li class="sub-menu__item">
-                                    <a href="#" class="sub-menu__link"
-                                        >DESIGN & UX</a
-                                    >
-                                </li>
-                            </ul>
-                        </li>
-                        <li class="main-menu__item main-menu__item--favoritos">
-                            <a href="#" class="main-menu__link">FAVORITOS</a>
-                        </li>
-                        <li class="main-menu__item">
-                            <a href="#" class="main-menu__link"
-                                >MINHA ESTANTE</a
-                            >
-                        </li>
-                    </ul>
+                <nav class="header__actions" aria-label="User Actions">
+                    <a href="#" class="action-btn heart" aria-label="Favoritos">
+                        <span class="icon-heart"></span>
+                        <span class="action-btn__text">Favoritos</span>
+                    </a>
+                    <a href="#" class="action-btn" aria-label="Minha sacola">
+                        <span class="icon-bag"></span>
+                        <span class="action-btn__text">Minha sacola</span>
+                    </a>
+                    <a href="#" class="action-btn" aria-label="Meu perfil">
+                        <span class="icon-profile"></span>
+                        <span class="action-btn__text">Meu perfil</span>
+                    </a>
                 </nav>
-            </div>
-            <nav class="header__actions" aria-label="User Actions">
-                <a href="#" class="action-btn heart">
-                    <span class="icon-heart"></span>
-                    <span class="action-btn__text">Favoritos</span>
-                </a>
-                <a href="#" class="action-btn">
-                    <span class="icon-bag"></span>
-                    <span class="action-btn__text">Meu perfil</span>
-                </a>
-                <a href="#" class="action-btn">
-                    <span class="icon-profile"></span>
-                    <span class="action-btn__text">Minha sacola</span>
-                </a>
-            </nav>
-        </header>
-        <script type="module" src="./src/script/index.js"></script>
+            </header>
+            <script type="module" src="./src/script/index.js"></script>
+        </div>
     </body>
 </html>
