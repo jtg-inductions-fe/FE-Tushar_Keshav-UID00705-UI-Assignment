@@ -9,130 +9,23 @@
     }
 }
 
-/// Sets the display of container
-/// This mixin default is `flex`
-/// if an unsupported or invalid value is passed.
-///
-/// @group Flexbox
-/// @param {String} $display-mode - inline-flex otherwise flex is set
-@mixin display-mode($display-mode) {
-    @if $display-mode == inline-flex {
-        display: inline-flex;
-    } @else {
-        display: flex;
-    }
-}
-
-/// Sets the alignment of flex items along the main-axis.
-/// This mixin default is `initial` (flex-start)
-/// if an unsupported or invalid value is passed.
-///
-/// @group Flexbox
-/// @param {String} $justify-content - The alignment keyword.
-///   Accepted values: `flex-start`, `flex-end`, `center`,
-///   `space-between`, `space-around`, `inherit`.
-@mixin justify-content($justify-content) {
-    @if $justify-content == flex-start {
-        justify-content: flex-start;
-    } @else if $justify-content == flex-end {
-        justify-content: flex-end;
-    } @else if $justify-content == center {
-        justify-content: center;
-    } @else if $justify-content == space-between {
-        justify-content: space-between;
-    } @else if $justify-content == space-around {
-        justify-content: space-around;
-    } @else if $justify-content == inherit {
-        justify-content: inherit;
-    } @else {
-        justify-content: initial;
-    }
-}
-
-/// Sets the alignment of flex items along the cross-axis.
-/// This mixin default is `initial`
-/// if an unsupported or invalid value is passed.
-///
-/// @group Flexbox
-/// @param {String} $align-items - The alignment keyword.
-///   Accepted values: `flex-start`, `flex-end`, `center`,
-///   `stretch`, `baseline`, `inherit`.
-@mixin align-items($align-items) {
-    @if $align-items == flex-start {
-        align-items: flex-start;
-    } @else if $align-items == flex-end {
-        align-items: flex-end;
-    } @else if $align-items == center {
-        align-items: center;
-    } @else if $align-items == stretch {
-        align-items: stretch;
-    } @else if $align-items == baseline {
-        align-items: baseline;
-    } @else if $align-items == inherit {
-        align-items: inherit;
-    } @else {
-        align-items: initial;
-    }
-}
-/// Sets the direction of flex-box item.
-/// This mixin default is `initial`
-/// if an unsupported or invalid value is passed.
-///
-/// @group Flexbox
-/// @param {String} $flex-direction - The alignment keyword.
-///   Accepted values: `row`, `row-reverse`, `column`,
-///   `column-reverse`, `inherit`.
-
-@mixin flex-directions($flex-direction) {
-    @if $flex-direction == row {
-        flex-direction: row;
-    } @else if $flex-direction == row-reverse {
-        flex-direction: row-reverse;
-    } @else if $flex-direction == column {
-        flex-direction: column;
-    } @else if $flex-direction == column-reverse {
-        flex-direction: column-reverse;
-    } @else if $flex-direction == inherit {
-        flex-direction: inherit;
-    } @else {
-        flex-direction: initial;
-    }
-}
-
-/// Sets the gap between flex items.
-///
-/// @group Flexbox
-/// @param {Number | String} $gap-value - The spacing size.
-///   Accepts units like `px`, `rem`, `%`, or keywords `initial` and `inherit`.
-@mixin flex-gap($gap-value) {
-    @if $gap-value == initial {
-        gap: initial;
-    } @else if $gap-value == inherit {
-        gap: inherit;
-    } @else if $gap-value != null {
-        gap: $gap-value;
-    } @else {
-    }
-}
-
 /// Master Flexbox manager that combines display, alignment, and spacing.
 ///
-/// @group Flexbox
 /// @param $display-mode - for setting the flex display
 /// @param $justify-content - for setting the arrangment over main-axis
 /// @param $align-items - for setting the arrangement over cross-axis
-/// @param flex-directions - for setting the direction of flex item
+/// @param flex-direction - for setting the direction of flex item
 /// @param $gap-value - for setting the spacing between items
 @mixin flex-box(
-    $display-mode: null,
-    $justify-content: null,
-    $align-items: null,
-    $flex-directions: null,
-    $gap-value: null
+    $display-mode: flex,
+    $justify-content: flex-start,
+    $align-items: stretch,
+    $flex-direction: row,
+    $gap-value: 0px
 ) {
-    @include display-mode($display-mode);
-    @include justify-content($justify-content);
-    @include align-items($align-items);
-    @include flex-directions($flex-directions);
-    @include flex-gap(($gap-value));
+    display: $display-mode;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    flex-direction: $flex-direction;
+    gap: $gap-value;
 }
