@@ -2,19 +2,35 @@ let hamburgerIcon = document.getElementsByClassName('header__hamburger')[0];
 let isMenuOpen = false;
 let mainMenu = document.getElementsByClassName('main-menu')[0];
 const icon = document.getElementsByClassName('icon-Menu')[0];
-if (hamburgerIcon && mainMenu) {
-    hamburgerIcon.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
+const isDesktop = window.matchMedia('(min-width: 1024px)');
 
-        if (isMenuOpen) {
-            // main_menu.style.display = "inline-block";
-            hamburgerIcon.style.background = '#002f52';
-            icon.style.setProperty('--icon-color', '#fff');
-        } else {
-            hamburgerIcon.style.backgroundColor = '#fff';
-            // main_menu.style.display = "none";
-            icon.style.setProperty('--icon-color', '#002f52');
-        }
-        mainMenu.classList.toggle('is-open', isMenuOpen);
-    });
+function closeMenu() {
+    isMenuOpen = !isMenuOpen;
+
+    if (isMenuOpen) {
+        icon.style.setProperty('--icon-color', '#fff');
+    } else {
+        icon.style.setProperty('--icon-color', '#002f52');
+    }
+    hamburgerIcon.classList.toggle('is-menu-open', isMenuOpen);
+    mainMenu.classList.toggle('is-menu-open', isMenuOpen);
 }
+
+if (hamburgerIcon && mainMenu && icon) {
+    hamburgerIcon.addEventListener('click', closeMenu);
+}
+document.addEventListener('click', (event) => {
+    if (
+        mainMenu.classList.contains('is-menu-open') &&
+        !mainMenu.contains(event.target) &&
+        !hamburgerIcon.contains(event.target)
+    ) {
+        closeMenu();
+    }
+});
+
+isDesktop.addEventListener('change', () => {
+    if (mainMenu.classList.contains('is-menu-open')) {
+        closeMenu();
+    }
+});
