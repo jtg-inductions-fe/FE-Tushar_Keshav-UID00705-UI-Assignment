@@ -83,7 +83,7 @@
 ///   Accepted values: `row`, `row-reverse`, `column`,
 ///   `column-reverse`, `inherit`.
 
-@mixin flex-direction($flex-direction) {
+@mixin flex-directions($flex-direction) {
     @if $flex-direction == row {
         flex-direction: row;
     } @else if $flex-direction == row-reverse {
