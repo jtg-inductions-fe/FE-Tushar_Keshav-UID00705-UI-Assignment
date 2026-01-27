@@ -12,7 +12,7 @@
 }
 
 .header {
-    background-color: white;
+    background-color: vars.$white;
     @include vars.flex-box(
         $align-items: center,
         $justify-content: space-between
@@ -32,11 +32,7 @@
     }
 
     &__group {
-        @include vars.flex-box(
-            $align-items: center,
-            $justify-content: center,
-            $gap-value: 24px
-        );
+        @include vars.flex-box($align-items: center, $justify-content: center);
     }
 
     &__hamburger {
@@ -44,8 +40,8 @@
         @include vars.flex-box($align-items: center, $justify-content: center);
         @include vars.padding($top: 28px, $right: 24px);
 
-        &.is-menu-open {
-            background: #002f52;
+        &.js-is-menu-open {
+            background: vars.$color-primary;
         }
 
         @include vars.breakpoint('medium') {
@@ -54,7 +50,12 @@
     }
 
     &__brand {
-        @include vars.padding($top: 16px, $right: 4px);
+        @include vars.padding(
+            $top: 16px,
+            $left: 12px,
+            $right: 4px,
+            $bottom: 16px
+        );
         @include vars.flex-box(
             $align-items: center,
             $justify-content: center,
@@ -63,13 +64,19 @@
 
         @include vars.breakpoint('medium') {
             padding-right: vars.px-to-rem(32px);
-            padding-left: vars.px-to-rem(68px);
+            padding-left: vars.px-to-rem(76px);
+            gap: vars.px-to-rem(16px);
         }
     }
 
     &__actions {
         overflow: hidden;
-        @include vars.padding($top: 16px);
+        @include vars.padding(
+            $top: 16px,
+            $right: 24px,
+            $bottom: 16px,
+            $left: 16px
+        );
         @include vars.flex-box(
             $align-items: center,
             $justify-content: end,
@@ -78,7 +85,7 @@
 
         @include vars.breakpoint('medium') {
             position: static;
-            gap: vars.px-to-rem(60px);
+            gap: vars.px-to-rem(40px);
             @include vars.padding($top: 24px, $right: 80px);
         }
     }
@@ -90,6 +97,7 @@
 
         @include vars.breakpoint('medium') {
             position: static;
+            @include vars.padding(20px);
         }
     }
 }
@@ -97,7 +105,7 @@
 .main-menu {
     display: none;
 
-    &.is-menu-open {
+    &.js-is-menu-open {
         display: inline-block;
     }
 
@@ -152,7 +160,7 @@
         @include vars.breakpoint('medium') {
             &:hover {
                 background: vars.$primary-gradient;
-                width: vars.px-to-rem(179px);
+                width: vars.px-to-rem(180px);
                 .sub-menu__link {
                     background: none;
                     color: white;
@@ -209,14 +217,11 @@
     display: none;
     font-family: vars.$font-brand;
     font-size: vars.px-to-rem(30px);
+    font-weight: vars.$weight-regular;
 
-    &__first-word {
+    > span {
         font-weight: vars.$weight-bold;
     }
-    &__second-word {
-        font-weight: vars.$weight-regular;
-    }
-
     @include vars.breakpoint('medium') {
         display: inline;
     }
@@ -226,4 +231,8 @@
     @include vars.breakpoint('medium') {
         display: none;
     }
+}
+.logo-img {
+    width: vars.px-to-rem(40px);
+    height: vars.px-to-rem(40px);
 }
