@@ -8,12 +8,49 @@
     align-items: center;
     background: vars.$primary-gradient;
     justify-content: center;
+    text-align: center;
+    color: white;
+    gap: vars.px-to-rem(24px);
+    padding: vars.px-to-rem(36px) vars.px-to-rem(24px);
 
-    &__title {
-        @include vars.breakpoint('large') {
-            font-size: vars.$size-3xl-desktop;
-            color: vars.$white;
+    @include vars.breakpoint('medium') {
+        height: vars.px-to-rem(330px);
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        gap: vars.px-to-rem(16px);
+        align-items: center;
+    }
+
+    &__button {
+        display: flex;
+        gap: vars.px-to-rem(10px);
+        justify-content: center;
+        align-items: center;
+        border-radius: vars.px-to-rem(24px);
+        border: vars.px-to-rem(1px) solid vars.$white;
+        width: 100%;
+        padding: vars.px-to-rem(12px);
+        box-sizing: border-box;
+        @include vars.breakpoint('medium') {
+            height: vars.px-to-rem(56px);
+            width: vars.px-to-rem(476px);
         }
+        @include vars.breakpoint('medium') {
+            width: vars.px-to-rem(586px);
+        }
+    }
+    &__body {
+        text-wrap: balance;
+        white-space: normal;
+        text-align: center;
+        font-size: vars.$size-md-mobile;
+        font-weight: vars.$weight-semibold;
+        font-family: vars.$font-family;
+        line-height: 1.5;
+        text-box-trim: trim-both;
     }
 }
 .button-text {
