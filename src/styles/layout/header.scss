@@ -24,13 +24,14 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: vars.px-to-rem(24px);
     }
     &__hamburger {
-        width: vars.px-to-rem(80px);
-        height: vars.px-to-rem(80px);
         display: flex;
         justify-content: center;
         align-items: center;
+        padding: vars.px-to-rem(28px) vars.px-to-rem(22px) vars.px-to-rem(28px)
+            vars.px-to-rem(22px);
         @include vars.breakpoint('medium') {
             display: none;
         }
@@ -39,6 +40,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        padding: vars.px-to-rem(16px) 0;
+        gap: vars.px-to-rem(12px);
 
         @include vars.breakpoint('medium') {
             padding-right: vars.px-to-rem(32px);
@@ -52,9 +55,21 @@
         flex-direction: row;
         justify-content: end;
         align-items: center;
+        gap: vars.px-to-rem(8px);
+        padding: vars.px-to-rem(16px) vars.px-to-rem(24px) vars.px-to-rem(16px)
+            0;
+
+        @include vars.breakpoint('medium') {
+            position: static;
+            gap: vars.px-to-rem(60px);
+            padding: vars.px-to-rem(21px) vars.px-to-rem(80px)
+                vars.px-to-rem(21px) 0;
+        }
+    }
+    &__nav {
         position: absolute;
-        top: 0;
-        right: 0;
+        top: 100%;
+
         @include vars.breakpoint('medium') {
             position: static;
         }
@@ -151,11 +166,7 @@
 .action-btn {
     display: flex;
     align-items: center;
-    padding: vars.px-to-rem(16px);
 
-    @include vars.breakpoint('medium') {
-        margin-right: vars.px-to-rem(60px);
-    }
     &__text {
         display: none;
         alignment-baseline: central;
@@ -171,10 +182,6 @@
     @include vars.breakpoint('medium') {
         display: none;
     }
-}
-.icon-menu {
-    font-size: vars.px-to-rem(36px);
-    color: vars.$orange-500;
 }
 
 .brand-name {
@@ -194,8 +201,4 @@
         font-weight: vars.$weight-regular;
         font-size: vars.px-to-rem(30px);
     }
-}
-
-.logo-img {
-    margin: 0 vars.px-to-rem(12px);
 }
