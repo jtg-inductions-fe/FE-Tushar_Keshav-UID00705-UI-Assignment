@@ -19,7 +19,10 @@
 .slider-section {
     &__title {
         @include vars.flex-box($justify-content: center, $align-items: center);
-        @include vars.padding($top: 24px);
+        @include vars.padding($top: 24px, $bottom: 12px);
+        @include vars.breakpoint('medium') {
+            padding-top: 64px;
+        }
     }
     &__content {
         background-color: vars.$gray-200;
@@ -27,12 +30,12 @@
         @include vars.flex-box(
             $flex-direction: column,
             $justify-content: center,
-            $align-items: center,
-            $gap-value: 8px
+            $align-items: center
         );
-        @include vars.padding(32px, 16px, 16px, 24px);
+        @include vars.padding(8px, 28px, 16px, 28px);
 
         @include vars.breakpoint('medium') {
+            padding-top: vars.px-to-rem(40px);
             gap: vars.px-to-rem(60px);
         }
         @include vars.breakpoint('extra-large') {
@@ -84,7 +87,7 @@
 }
 .carousel-nav__btn {
     position: absolute;
-    top: 50%;
+    top: 68%;
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 10;
@@ -101,12 +104,14 @@
     }
 }
 .card {
-    @include vars.padding(16px);
+    @include vars.padding(20px, 16px, 24px, 12px);
     @include vars.flex-box(
         $flex-direction: row,
-        $justify-content: space-between
+        $justify-content: space-between,
+        $gap-value: 16px
     );
     width: 100%;
+    height: vars.px-to-rem(295px);
     max-width: vars.px-to-rem(588px);
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     background-color: vars.$white;
@@ -119,18 +124,22 @@
             $align-items: start,
             $gap-value: 12px
         );
+        flex-grow: 1;
+        & > p {
+            line-height: 1.5;
+        }
     }
     &__left {
         @include vars.flex-box(
             $flex-direction: column,
             $justify-content: space-between,
-            $align-items: start,
-            $gap-value: 36px
+            $align-items: start
         );
+        flex-basis: 54%;
     }
     &__heading {
         color: vars.$orange-500;
-
+        line-height: 1.5;
         @include vars.breakpoint('large') {
             font-size: vars.$size-2xl-desktop;
         }
@@ -138,10 +147,23 @@
     &__right {
         @include vars.flex-box(
             $flex-direction: column,
-            $justify-content: space-between,
             $align-items: center,
             $gap-value: 16px
         );
+        flex-basis: 46%;
+        @include vars.breakpoint('medium') {
+            flex-basis: initial;
+        }
+    }
+    &__image {
+        width: 100%;
+        flex-grow: 1;
+        & > img {
+            width: 100%;
+        }
+        @include vars.breakpoint('medium') {
+            width: vars.px-to-rem(146px);
+        }
     }
     &__icons {
         @include vars.flex-box(

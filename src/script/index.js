@@ -11,15 +11,14 @@ new Swiper('.swiper', {
     modules: [Pagination, Navigation],
     direction: 'horizontal',
     slidesPerView: 'auto',
-    spaceBetween: 20,
     centeredSlides: true,
     loop: true,
     freeMode: true,
+    autoHeight: true,
 
     breakpoints: {
         1024: {
             slidesPerView: 3,
-            spaceBetween: 75,
             navigation: {
                 enabled: true,
             },
