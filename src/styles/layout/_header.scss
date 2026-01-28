@@ -1,0 +1,243 @@
+@use '../abstracts' as vars;
+
+%item-hover {
+    transition: opacity 0.25s ease;
+    opacity: 1;
+    &:hover,
+    &:focus-visible {
+        opacity: 0.7;
+    }
+}
+
+.header {
+    background-color: vars.$white;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    @include vars.flex-box(
+        $align-items: center,
+        $justify-content: space-between
+    );
+
+    &__container {
+        position: relative;
+        @include vars.flex-box(
+            $align-items: start,
+            $flex-direction: column,
+            $justify-content: center
+        );
+
+        @include vars.breakpoint('medium') {
+            @include vars.flex-box($align-items: center);
+        }
+    }
+
+    &__group {
+        @include vars.flex-box($align-items: center, $justify-content: center);
+    }
+
+    &__hamburger {
+        background: vars.$white;
+        @include vars.flex-box($align-items: center, $justify-content: center);
+        @include vars.padding($top: 28px, $right: 24px);
+
+        &.js-is-menu-open {
+            background: vars.$color-primary;
+        }
+
+        @include vars.breakpoint('medium') {
+            display: none;
+        }
+    }
+
+    &__brand {
+        @include vars.padding(
+            $top: 16px,
+            $left: 12px,
+            $right: 4px,
+            $bottom: 16px
+        );
+        @include vars.flex-box(
+            $align-items: center,
+            $justify-content: center,
+            $gap-value: 12px
+        );
+
+        @include vars.breakpoint('medium') {
+            padding-right: vars.px-to-rem(32px);
+            padding-left: vars.px-to-rem(76px);
+            gap: vars.px-to-rem(16px);
+        }
+    }
+
+    &__actions {
+        overflow: hidden;
+        @include vars.padding(
+            $top: 16px,
+            $right: 24px,
+            $bottom: 16px,
+            $left: 16px
+        );
+        @include vars.flex-box(
+            $align-items: center,
+            $justify-content: end,
+            $gap-value: 8px
+        );
+
+        @include vars.breakpoint('medium') {
+            position: static;
+            gap: vars.px-to-rem(40px);
+            @include vars.padding($top: 24px, $right: 80px);
+        }
+    }
+
+    &__nav {
+        position: absolute;
+        top: 100%;
+        background-color: vars.$white;
+        z-index: 20;
+
+        @include vars.breakpoint('medium') {
+            position: static;
+            @include vars.padding(20px);
+        }
+    }
+}
+
+.main-menu {
+    display: none;
+
+    &.js-is-menu-open {
+        display: inline-block;
+    }
+
+    &__item {
+        color: vars.$orange-500;
+        font-weight: vars.$weight-bold;
+        font-size: vars.px-to-rem(16px);
+        font-family: vars.$font-family;
+
+        @include vars.breakpoint('medium') {
+            font-weight: vars.$weight-regular;
+            color: vars.$black;
+        }
+    }
+    &__item--favoritos {
+        display: none;
+
+        @include vars.breakpoint('medium') {
+            display: inline;
+        }
+    }
+    &__link {
+        text-wrap: nowrap;
+        display: inline-block;
+        width: 100%;
+
+        @include vars.padding(24px, 132px, 16px, 24px);
+
+        @include vars.breakpoint('medium') {
+            @include vars.padding(12px, 32px, 12px, 12px);
+        }
+        @extend %item-hover;
+    }
+
+    @include vars.breakpoint('medium') {
+        @include vars.flex-box($align-items: center, $justify-content: start);
+        flex-grow: 1;
+    }
+}
+
+.sub-menu {
+    all: initial;
+    display: none;
+    background-color: vars.$white;
+    @include vars.breakpoint('medium') {
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
+
+    &__item {
+        all: unset;
+        width: 100%;
+        @include vars.breakpoint('medium') {
+            &:hover {
+                background: vars.$primary-gradient;
+                .sub-menu__link {
+                    background: none;
+                    color: vars.$white;
+                    -webkit-text-fill-color: vars.$white;
+                    background-clip: border-box;
+                }
+            }
+        }
+    }
+    &__link {
+        display: inline-block;
+        @include vars.padding(24px, 132px, 8px, 24px);
+        width: 100%;
+
+        background: vars.$primary-gradient;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: vars.$transparent;
+        -webkit-text-fill-color: vars.$transparent;
+
+        @include vars.breakpoint('medium') {
+            @include vars.padding(24px, 20px, 8px, 24px);
+        }
+        @extend %item-hover;
+    }
+}
+.has-sub-menu {
+    position: relative;
+
+    &:hover {
+        @include vars.breakpoint('medium') {
+            background: vars.$primary-gradient;
+            color: vars.$white;
+        }
+        .sub-menu {
+            @include vars.flex-box($flex-direction: column);
+        }
+    }
+}
+
+.action-btn {
+    @include vars.flex-box($align-items: center, $gap-value: 12px);
+
+    &__text {
+        display: none;
+        text-align: center;
+        font-size: vars.px-to-rem(20px);
+        @include vars.breakpoint('large') {
+            display: inline-block;
+        }
+    }
+}
+
+.brand-name {
+    text-wrap: nowrap;
+    display: none;
+    font-family: vars.$font-brand;
+    font-size: vars.px-to-rem(30px);
+    font-weight: vars.$weight-regular;
+
+    > span {
+        font-weight: vars.$weight-bold;
+    }
+    @include vars.breakpoint('medium') {
+        display: inline;
+    }
+}
+
+.heart {
+    @include vars.breakpoint('medium') {
+        display: none;
+    }
+}
+.logo-img {
+    width: vars.px-to-rem(40px);
+    height: vars.px-to-rem(40px);
+}

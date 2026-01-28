@@ -1,4 +1,5 @@
-@use 'variables' as *;
+@use 'variables.module' as *;
+@use 'functions' as *;
 
 /// Applies styles at a specific screen size (breakpoint)
 /// @param {String} $breakpoint - Key from the $breakpoints map (e.g., small, medium)
@@ -9,8 +10,16 @@
     }
 }
 
+/// To apply padding, see below for usage.
+/// If only top is provided it is applied on all four sides
+/// If top and right is provided it will act as vertical and horizontal padding
+/// If all four are provided separately.
+@mixin padding($top, $right: $top, $bottom: $top, $left: $right) {
+    padding: px-to-rem($top) px-to-rem($right) px-to-rem($bottom)
+        px-to-rem($left);
+}
+
 /// Master Flexbox manager that combines display, alignment, and spacing.
-///
 /// @param $display-mode - for setting the flex display
 /// @param $justify-content - for setting the arrangment over main-axis
 /// @param $align-items - for setting the arrangement over cross-axis
@@ -27,5 +36,5 @@
     justify-content: $justify-content;
     align-items: $align-items;
     flex-direction: $flex-direction;
-    gap: $gap-value;
+    gap: px-to-rem($gap-value);
 }
