@@ -43,7 +43,7 @@ h3 {
     @include mx.breakpoint('medium') {
         font-size: vars.$size-body-tablet;
     }
-    @include mx.breakpoint('large') {
+    @include mx.breakpoint('extra-large') {
         font-size: vars.$size-2xl-desktop;
     }
 }

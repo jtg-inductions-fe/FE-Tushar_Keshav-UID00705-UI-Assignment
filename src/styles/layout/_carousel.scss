@@ -5,12 +5,16 @@
     @include vars.breakpoint('medium') {
         width: vars.px-to-rem(726px);
         padding: 0 vars.px-to-rem(60px);
+        height: vars.px-to-rem(360px);
     }
 }
 .swiper-wrapper {
     @include vars.padding(24px);
+    gap: vars.px-to-rem(24px);
+
     @include vars.breakpoint('medium') {
-        top: 60px;
+        gap: vars.px-to-rem(76px);
+        top: vars.px-to-rem(60px);
     }
 }
 .swiper-container {
@@ -21,7 +25,7 @@
         @include vars.flex-box($justify-content: center, $align-items: center);
         @include vars.padding($top: 24px, $bottom: 12px);
         @include vars.breakpoint('medium') {
-            padding-top: 64px;
+            padding-top: vars.px-to-rem(64px);
         }
     }
     &__content {
@@ -91,13 +95,13 @@
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 10;
-    padding: 10px;
+    @include vars.padding(10px);
     display: none;
     &--prev {
-        left: -50px;
+        left: vars.px-to-rem(-50px);
     }
     &--next {
-        right: -50px;
+        right: vars.px-to-rem(-50px);
     }
     @include vars.breakpoint('medium') {
         display: block;
@@ -105,15 +109,10 @@
 }
 .card {
     @include vars.padding(20px, 16px, 24px, 12px);
-    @include vars.flex-box(
-        $flex-direction: row,
-        $justify-content: space-between,
-        $gap-value: 16px
-    );
+    @include vars.flex-box($flex-direction: row, $gap-value: 16px);
     width: 100%;
-    height: vars.px-to-rem(295px);
     max-width: vars.px-to-rem(588px);
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 vars.px-to-rem(4px) vars.px-to-rem(4px) 0 vars.$shadow-color;
     background-color: vars.$white;
     border-radius: vars.px-to-rem(10px);
 
@@ -133,14 +132,16 @@
         @include vars.flex-box(
             $flex-direction: column,
             $justify-content: space-between,
-            $align-items: start
+            $align-items: start,
+            $gap-value: 32px
         );
         flex-basis: 54%;
+        flex-grow: 1;
     }
     &__heading {
         color: vars.$orange-500;
         line-height: 1.5;
-        @include vars.breakpoint('large') {
+        @include vars.breakpoint('extra-large') {
             font-size: vars.$size-2xl-desktop;
         }
     }
@@ -150,16 +151,14 @@
             $align-items: center,
             $gap-value: 16px
         );
-        flex-basis: 46%;
-        @include vars.breakpoint('medium') {
-            flex-basis: initial;
-        }
     }
     &__image {
         width: 100%;
         flex-grow: 1;
+        @include vars.flex-box($align-items: start, $justify-content: center);
         & > img {
             width: 100%;
+            max-width: vars.px-to-rem(162px);
         }
         @include vars.breakpoint('medium') {
             width: vars.px-to-rem(146px);
