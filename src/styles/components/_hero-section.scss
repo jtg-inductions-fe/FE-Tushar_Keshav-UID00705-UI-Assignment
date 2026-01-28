@@ -22,6 +22,11 @@
         flex-direction: column;
         gap: vars.px-to-rem(16px);
         align-items: center;
+
+        @include vars.breakpoint('medium') {
+            gap: vars.px-to-rem(12px);
+            @include vars.padding(8px);
+        }
     }
 
     &__button {
@@ -38,7 +43,7 @@
             height: vars.px-to-rem(56px);
             width: vars.px-to-rem(476px);
         }
-        @include vars.breakpoint('medium') {
+        @include vars.breakpoint('large') {
             width: vars.px-to-rem(586px);
         }
     }
@@ -55,4 +60,5 @@
 }
 .button-text {
     font-family: vars.$font-family;
+    padding-left: 0.25rem;
 }
