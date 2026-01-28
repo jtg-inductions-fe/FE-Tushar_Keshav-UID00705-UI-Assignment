@@ -10,10 +10,10 @@
     }
 }
 
-/// To apply padding, se below for usage.
+/// To apply padding, see below for usage.
 /// If only top is provided it is applied on all four sides
 /// If top and right is provided it will act as vertical and horizontal padding
-/// If all four are provided seperately.
+/// If all four are provided separately.
 @mixin padding($top, $right: $top, $bottom: $top, $left: $right) {
     padding: px-to-rem($top) px-to-rem($right) px-to-rem($bottom)
         px-to-rem($left);
