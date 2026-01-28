@@ -7,6 +7,7 @@
     </head>
     <body>
         <div class="container">
+            <!--  Header Section  -->
             <header class="header">
                 <div class="header__container">
                     <div class="header__group">
@@ -92,23 +93,29 @@
                     </a>
                 </nav>
             </header>
+            <!-- End of Header Section-->
+
+            <!--  Hero Section  -->
             <section class="hero-section">
                 <div class="hero-section__text">
                     <h1 class="hero-section__title">
                         Já sabe por onde começar?
                     </h1>
-                    <p class="hero-section__body">
+                    <p class="hero-section__subtext">
                         Encontre em nossa estante o que precisa para seu
                         desenvolvimento!
                     </p>
                 </div>
-                <button class="hero-section__button">
+                <form class="hero-section__search">
                     <span class="icon-search"></span>
-                    <span class="button-text"
-                        >Qual será sua próxima leitura?</span
-                    >
-                </button>
+                    <input
+                        type="text"
+                        class="hero-search"
+                        placeholder="Qual será sua próxima leitura?"
+                    />
+                </form>
             </section>
+            <!--  End of Hero Section  -->
         </div>
         <script type="module" src="./src/script/index.js"></script>
     </body>

@@ -1,27 +1,29 @@
 @use '../abstracts/' as vars;
 
 .hero-section {
-    height: vars.px-to-rem(215px);
+    height: vars.px-to-rem(216px);
     width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background: vars.$primary-gradient;
-    justify-content: center;
     text-align: center;
-    color: white;
-    gap: vars.px-to-rem(24px);
-    padding: vars.px-to-rem(36px) vars.px-to-rem(24px);
+    color: vars.$white;
+    @include vars.flex-box(
+        $flex-direction: column,
+        $align-items: center,
+        $justify-content: center,
+        $gap-value: 24px
+    );
+    @include vars.padding($top: 36px, $right: 24px);
 
     @include vars.breakpoint('medium') {
-        height: vars.px-to-rem(330px);
+        height: vars.px-to-rem(332px);
     }
 
     &__text {
-        display: flex;
-        flex-direction: column;
-        gap: vars.px-to-rem(16px);
-        align-items: center;
+        @include vars.flex-box(
+            $flex-direction: column,
+            $align-items: center,
+            $gap-value: 16px
+        );
 
         @include vars.breakpoint('medium') {
             gap: vars.px-to-rem(12px);
@@ -29,16 +31,18 @@
         }
     }
 
-    &__button {
-        display: flex;
-        gap: vars.px-to-rem(10px);
-        justify-content: center;
-        align-items: center;
+    &__search {
         border-radius: vars.px-to-rem(24px);
         border: vars.px-to-rem(1px) solid vars.$white;
         width: 100%;
-        padding: vars.px-to-rem(12px);
         box-sizing: border-box;
+
+        @include vars.flex-box(
+            $align-items: center,
+            $justify-content: center,
+            $gap-value: 10px
+        );
+        @include vars.padding(12px);
         @include vars.breakpoint('medium') {
             height: vars.px-to-rem(56px);
             width: vars.px-to-rem(476px);
@@ -47,7 +51,7 @@
             width: vars.px-to-rem(586px);
         }
     }
-    &__body {
+    &__subtext {
         text-wrap: balance;
         white-space: normal;
         text-align: center;
@@ -58,7 +62,14 @@
         text-box-trim: trim-both;
     }
 }
-.button-text {
-    font-family: vars.$font-family;
-    padding-left: 0.25rem;
+
+.hero-search {
+    background-color: vars.$transparent;
+    border: none;
+    outline: none;
+    &::placeholder {
+        font-family: vars.$font-family;
+        padding-left: 0.25rem;
+        color: inherit;
+    }
 }
