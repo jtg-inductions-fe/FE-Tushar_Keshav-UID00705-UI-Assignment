@@ -13,6 +13,7 @@
 
 .header {
     background-color: vars.$white;
+    position: sticky;
     @include vars.flex-box(
         $align-items: center,
         $justify-content: space-between
