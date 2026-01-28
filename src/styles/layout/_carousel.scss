@@ -1,0 +1,153 @@
+@use '../abstracts/' as vars;
+.swiper {
+    width: 100%;
+    position: relative;
+    @include vars.breakpoint('medium') {
+        width: vars.px-to-rem(726px);
+        padding: 0 vars.px-to-rem(60px);
+    }
+}
+.swiper-wrapper {
+    @include vars.padding(24px);
+    @include vars.breakpoint('medium') {
+        top: 60px;
+    }
+}
+.swiper-container {
+    position: relative;
+}
+.slider-section {
+    &__title {
+        @include vars.flex-box($justify-content: center, $align-items: center);
+        @include vars.padding($top: 24px);
+    }
+    &__content {
+        background-color: vars.$gray-200;
+        position: relative;
+        @include vars.flex-box(
+            $flex-direction: column,
+            $justify-content: center,
+            $align-items: center,
+            $gap-value: 8px
+        );
+        @include vars.padding(32px, 16px, 16px, 24px);
+
+        @include vars.breakpoint('medium') {
+            gap: vars.px-to-rem(60px);
+        }
+        @include vars.breakpoint('extra-large') {
+            @include vars.flex-box(
+                $gap-value: 120px,
+                $align-items: end,
+                $justify-content: center
+            );
+            @include vars.padding($top: 100px, $right: 60px);
+        }
+    }
+}
+.swiper-slide {
+    width: auto !important;
+    height: vars.px-to-rem(248px) !important;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+    }
+    @include vars.breakpoint('medium') {
+        width: vars.px-to-rem(192px) !important;
+        height: vars.px-to-rem(266px) !important;
+    }
+    @include vars.breakpoint('medium') {
+        width: vars.px-to-rem(192px) !important;
+        height: vars.px-to-rem(266px) !important;
+    }
+}
+.swiper-pagination {
+    --swiper-pagination-bullet-width: #{vars.px-to-rem(8px)};
+    --swiper-pagination-bullet-height: #{vars.px-to-rem(8px)};
+
+    --swiper-pagination-top: #{vars.px-to-rem(0px)};
+    --swiper-pagination-bottom: auto;
+
+    --swiper-pagination-bullet-inactive-color: #{vars.$gray-777};
+    --swiper-pagination-color: #{vars.$color-primary};
+
+    --swiper-pagination-bullet-inactive-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: #{vars.px-to-rem(4px)};
+
+    @include vars.breakpoint('medium') {
+        --swiper-pagination-bullet-width: #{vars.px-to-rem(12px)};
+        --swiper-pagination-bullet-height: #{vars.px-to-rem(12px)};
+        --swiper-pagination-bullet-horizontal-gap: #{vars.px-to-rem(6px)};
+    }
+}
+.carousel-nav__btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    padding: 10px;
+    display: none;
+    &--prev {
+        left: -50px;
+    }
+    &--next {
+        right: -50px;
+    }
+    @include vars.breakpoint('medium') {
+        display: block;
+    }
+}
+.card {
+    @include vars.padding(16px);
+    @include vars.flex-box(
+        $flex-direction: row,
+        $justify-content: space-between
+    );
+    width: 100%;
+    max-width: vars.px-to-rem(588px);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background-color: vars.$white;
+    border-radius: vars.px-to-rem(10px);
+
+    &__content {
+        @include vars.flex-box(
+            $flex-direction: column,
+            $justify-content: start,
+            $align-items: start,
+            $gap-value: 12px
+        );
+    }
+    &__left {
+        @include vars.flex-box(
+            $flex-direction: column,
+            $justify-content: space-between,
+            $align-items: start,
+            $gap-value: 36px
+        );
+    }
+    &__heading {
+        color: vars.$orange-500;
+
+        @include vars.breakpoint('large') {
+            font-size: vars.$size-2xl-desktop;
+        }
+    }
+    &__right {
+        @include vars.flex-box(
+            $flex-direction: column,
+            $justify-content: space-between,
+            $align-items: center,
+            $gap-value: 16px
+        );
+    }
+    &__icons {
+        @include vars.flex-box(
+            $justify-content: start,
+            $align-items: center,
+            $gap-value: 12px
+        );
+    }
+}

@@ -28,3 +28,10 @@ $btn-font-desktop: vars.px-to-rem(24px);
         padding: $btn-padding-desktop;
     }
 }
+.small-btn {
+    @include vars.padding($top: 12px, $right: 16px);
+    background-color: vars.$orange-500;
+    color: vars.$white;
+    font-weight: vars.$weight-bold;
+    font-size: vars.$size-md-mobile;
+}
