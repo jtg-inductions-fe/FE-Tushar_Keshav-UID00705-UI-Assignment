@@ -1,9 +1,7 @@
 @use '../abstracts' as vars;
 
 %item-hover {
-    transition:
-        opacity 0.25s ease,
-        color 0.25s ease;
+    transition: opacity 0.25s ease;
     opacity: 1;
     &:hover,
     &:focus-visible {
@@ -168,8 +166,8 @@
                 background: vars.$primary-gradient;
                 .sub-menu__link {
                     background: none;
-                    color: white;
-                    -webkit-text-fill-color: white;
+                    color: vars.$white;
+                    -webkit-text-fill-color: vars.$white;
                     background-clip: border-box;
                 }
             }
@@ -183,8 +181,8 @@
         background: vars.$primary-gradient;
         -webkit-background-clip: text;
         background-clip: text;
-        color: transparent;
-        -webkit-text-fill-color: transparent;
+        color: vars.$transparent;
+        -webkit-text-fill-color: vars.$transparent;
 
         @include vars.breakpoint('medium') {
             @include vars.padding(24px, 20px, 8px, 24px);
