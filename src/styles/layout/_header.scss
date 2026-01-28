@@ -94,6 +94,7 @@
         position: absolute;
         top: 100%;
         background-color: vars.$white;
+        z-index: 20;
 
         @include vars.breakpoint('medium') {
             position: static;
@@ -130,7 +131,9 @@
     &__link {
         text-wrap: nowrap;
         display: inline-block;
-        @include vars.padding(24px, 132px, 8px, 24px);
+        width: 100%;
+
+        @include vars.padding(24px, 132px, 16px, 24px);
 
         @include vars.breakpoint('medium') {
             @include vars.padding(12px, 32px, 12px, 12px);
@@ -160,7 +163,6 @@
         @include vars.breakpoint('medium') {
             &:hover {
                 background: vars.$primary-gradient;
-                width: vars.px-to-rem(180px);
                 .sub-menu__link {
                     background: none;
                     color: white;
@@ -173,6 +175,8 @@
     &__link {
         display: inline-block;
         @include vars.padding(24px, 132px, 8px, 24px);
+        width: 100%;
+
         background: vars.$primary-gradient;
         -webkit-background-clip: text;
         background-clip: text;
