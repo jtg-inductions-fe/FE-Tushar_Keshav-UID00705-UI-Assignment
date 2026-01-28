@@ -211,7 +211,7 @@
 
     &__text {
         display: none;
-        alignment-baseline: central;
+        text-align: center;
         font-size: vars.px-to-rem(20px);
         @include vars.breakpoint('large') {
             display: inline-block;
