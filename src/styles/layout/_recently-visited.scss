@@ -1,0 +1,58 @@
+@use '../abstracts/' as vars;
+
+.recently-visited {
+    background: vars.$primary-gradient;
+    @include vars.flex-box(
+        $align-items: center,
+        $flex-direction: column,
+        $gap-value: 32px
+    );
+    @include vars.padding(24px, 16px);
+
+    @include vars.breakpoint('medium') {
+        @include vars.padding(32px);
+        gap: vars.px-to-rem(40px);
+    }
+    @include vars.breakpoint('large') {
+        @include vars.padding($top: 64px, $bottom: 76px);
+    }
+
+    &__title {
+        color: vars.$white;
+        font-weight: vars.$weight-light;
+
+        @include vars.breakpoint('medium') {
+            font-size: vars.$size-lg-tablet;
+        }
+    }
+
+    &__topics {
+        max-width: vars.px-to-rem(780px);
+        flex-wrap: wrap;
+        @include vars.flex-box($justify-content: center);
+    }
+
+    &__topic {
+        display: inline-block;
+        border: none;
+        background-color: vars.$orange-500;
+        color: vars.$white;
+        cursor: pointer;
+        margin: vars.px-to-rem(7px);
+        font-size: vars.$size-sm-mobile;
+        @include vars.padding(16px, 24px);
+
+        @include vars.breakpoint('medium') {
+            font-size: vars.$size-lg-tablet;
+            @include vars.padding(24px, 32px);
+        }
+
+        &--first {
+            order: -2;
+        }
+
+        &--second {
+            order: -1;
+        }
+    }
+}
