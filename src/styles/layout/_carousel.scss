@@ -11,8 +11,8 @@
 }
 
 .swiper-wrapper {
-    @include vars.padding(24px);
     gap: vars.px-to-rem(24px);
+    @include vars.padding(24px);
 
     @include vars.breakpoint('medium') {
         gap: vars.px-to-rem(76px);
@@ -62,8 +62,8 @@
 }
 
 .swiper-slide {
-    width: auto !important;
-    height: vars.px-to-rem(248px) !important;
+    width: auto;
+    height: vars.px-to-rem(248px);
 
     &__img {
         width: 100%;
@@ -72,13 +72,8 @@
     }
 
     @include vars.breakpoint('medium') {
-        width: vars.px-to-rem(192px) !important;
-        height: vars.px-to-rem(266px) !important;
-    }
-
-    @include vars.breakpoint('medium') {
-        width: vars.px-to-rem(192px) !important;
-        height: vars.px-to-rem(266px) !important;
+        width: vars.px-to-rem(192px);
+        height: vars.px-to-rem(266px);
     }
 }
 
@@ -127,13 +122,14 @@
 }
 
 .card {
-    @include vars.padding(20px, 16px, 24px, 12px);
-    @include vars.flex-box($flex-direction: row, $gap-value: 16px);
     width: 100%;
     max-width: vars.px-to-rem(588px);
     box-shadow: 0 vars.px-to-rem(4px) vars.px-to-rem(4px) 0 vars.$shadow-color;
     background-color: vars.$white;
     border-radius: vars.px-to-rem(10px);
+    overflow: clip;
+    @include vars.padding(20px, 16px, 24px, 12px);
+    @include vars.flex-box($flex-direction: row, $gap-value: 16px);
 
     &__content {
         @include vars.flex-box(
@@ -146,6 +142,7 @@
 
         & > p {
             line-height: 1.5;
+            @include vars.line-clamp(2);
         }
     }
 
@@ -163,6 +160,8 @@
     &__heading {
         color: vars.$orange-500;
         line-height: 1.5;
+        @include vars.line-clamp(2);
+
         @include vars.breakpoint('extra-large') {
             font-size: vars.$size-2xl-desktop;
         }

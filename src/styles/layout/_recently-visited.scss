@@ -13,6 +13,7 @@
         @include vars.padding(32px);
         gap: vars.px-to-rem(40px);
     }
+
     @include vars.breakpoint('large') {
         @include vars.padding($top: 64px, $bottom: 76px);
     }

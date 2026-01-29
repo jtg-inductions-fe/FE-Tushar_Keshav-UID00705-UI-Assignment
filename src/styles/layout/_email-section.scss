@@ -1,9 +1,9 @@
 @use '../abstracts/' as vars;
 
 .email-section {
+    width: 100%;
     @include vars.flex-box($align-items: center, $justify-content: center);
     @include vars.padding($top: 24px, $bottom: 30px);
-    width: 100%;
 
     &__container {
         max-width: 100%;
@@ -14,10 +14,10 @@
         );
 
         @include vars.breakpoint('medium') {
-            @include vars.padding($top: 30px, $right: 150px, $bottom: 54px);
             flex-direction: row;
             justify-content: center;
             gap: 0;
+            @include vars.padding($top: 30px, $right: 150px, $bottom: 54px);
         }
     }
 
@@ -45,6 +45,7 @@
         width: 90%;
         font-weight: vars.$weight-light;
         line-height: 1.5;
+        @include vars.line-clamp(2);
     }
 
     &__email-bar {

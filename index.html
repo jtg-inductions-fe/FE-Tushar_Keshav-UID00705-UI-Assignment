@@ -13,7 +13,7 @@
                     <div class="header__group">
                         <button
                             class="header__hamburger"
-                            aria-label="menu button"
+                            aria-label="Main menu"
                         >
                             <span class="icon-Menu"></span>
                         </button>
@@ -21,14 +21,18 @@
                             <img
                                 class="logo-img"
                                 src="assets/images/brand-logo.png"
-                                alt="brand-logo"
+                                alt="brand logo"
                             />
                             <div class="brand-name">
                                 <span>Alura</span>Books
                             </div>
                         </div>
                     </div>
-                    <nav class="header__nav" id="main-nav" aria-label="menu">
+                    <nav
+                        class="header__nav"
+                        id="main-nav"
+                        aria-label="Main menu"
+                    >
                         <ul class="main-menu">
                             <li class="main-menu__item has-sub-menu is-open">
                                 <a href="#" class="main-menu__link categories"
@@ -99,9 +103,9 @@
             <!-- End of Header Section-->
 
             <!--  Hero Section  -->
-            <section class="hero-section" aria-label="hero section">
+            <section class="hero-section" aria-labelledby="hero-title">
                 <div class="hero-section__text">
-                    <h1 class="hero-section__title">
+                    <h1 class="hero-section__title" id="hero-title">
                         Já sabe por onde começar?
                     </h1>
                     <p class="hero-section__subtext">
@@ -171,7 +175,7 @@
                                     <img
                                         class="swiper-slide__img"
                                         src="/assets/images/carousel-apache-kafka.png"
-                                        alt="apache-kafka"
+                                        alt="apache kafka"
                                         loading="lazy"
                                     />
                                 </div>
@@ -203,7 +207,7 @@
                                     <img
                                         class="swiper-slide__img"
                                         src="/assets/images/carousel-guia-front-end.png"
-                                        alt="guia-front-end"
+                                        alt="guia front end"
                                         loading="lazy"
                                     />
                                 </div>
@@ -235,23 +239,23 @@
                                     <img
                                         class="swiper-slide__img"
                                         src="/assets/images/carousel-metricas-ageis.png"
-                                        alt="metricas-ageis"
+                                        alt="metricas ageis"
                                         loading="lazy"
                                     />
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="card" aria-label="card">
+                    <div class="card" aria-labelledby="card-title">
                         <div class="card__left">
                             <div class="card__content">
-                                <h3 class="card__heading">
+                                <h3 class="card__heading" id="card-title">
                                     Talvez você também se interesse por...
                                 </h3>
                                 <div class="card__sub-heading subheading">
                                     Angular 11 e Firebase
                                 </div>
-                                <p class="card__body">
+                                <p>
                                     Construindo uma aplicação integrada com a
                                     plataforma do Google.
                                 </p>
@@ -288,16 +292,13 @@
             <!-- End of Slider Section 1  -->
 
             <!--  Recently Visited Topics Section  -->
-            <section
-                class="recently-visited"
-                aria-label="recently visited topics section"
-            >
-                <h3 class="recently-visited__title">
+            <section class="recently-visited" aria-labelledby="topics-title">
+                <h3 class="recently-visited__title" id="topics-title">
                     TÓPICOS VISITADOS RECENTEMENTE
                 </h3>
                 <nav
                     class="recently-visited__topics"
-                    aria-label="recently visited topics list"
+                    aria-label="recently visited topics"
                 >
                     <div
                         class="recently-visited__topic recently-visited__topic--first"
@@ -360,10 +361,10 @@
             <!--  End of Recently Visited Topics Section  -->
 
             <!--  Email Section  -->
-            <section class="email-section">
+            <section class="email-section" aria-labelledby="newsletter-title">
                 <div class="email-section__container">
                     <div class="email-section__content">
-                        <h2 class="email-section__title">
+                        <h2 class="email-section__title" id="newsletter-title">
                             Fique por dentro das novidades!
                         </h2>
                         <p class="email-section__sub-text">
@@ -389,10 +390,7 @@
                 <div class="footer__container">
                     <div class="footer__partner">Group Alura</div>
                     <div class="footer__list">
-                        <nav
-                            class="footer__item"
-                            aria-label="EDUCAÇÃO navigation"
-                        >
+                        <nav class="footer__item" aria-label="EDUCAÇÃO">
                             <h4 class="footer-column__title labels">
                                 EDUCAÇÃO
                             </h4>
@@ -421,10 +419,7 @@
                                 </li>
                             </ul>
                         </nav>
-                        <nav
-                            class="footer__item"
-                            aria-label="EDUCAÇÃO ONLINE navigation"
-                        >
+                        <nav class="footer__item" aria-label="EDUCAÇÃO ONLINE">
                             <h4 class="footer-column__title labels">
                                 EDUCAÇÃO ONLINE
                             </h4>
@@ -503,10 +498,7 @@
                                 </li>
                             </ul>
                         </nav>
-                        <nav
-                            class="footer__item"
-                            aria-label="COMUNIDADE navigation"
-                        >
+                        <nav class="footer__item" aria-label="COMUNIDADE">
                             <h4 class="footer-column__title labels">
                                 COMUNIDADE
                             </h4>

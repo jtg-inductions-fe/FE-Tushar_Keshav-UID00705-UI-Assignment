@@ -5,9 +5,11 @@ body {
     font-size: vars.$size-sm-mobile;
     font-weight: vars.$weight-regular;
     font-family: vars.$font-family;
+
     @include mx.breakpoint('medium') {
         font-size: vars.$size-body-tablet;
     }
+
     @include mx.breakpoint('large') {
         font-size: vars.$size-body-desktop;
     }
@@ -28,9 +30,11 @@ h2 {
     font-weight: vars.$weight-bold;
     font-family: vars.$font-family;
     color: vars.$orange-500;
+
     @include mx.breakpoint('medium') {
         font-size: vars.$size-xl-tablet;
     }
+
     @include mx.breakpoint('large') {
         font-size: vars.$size-2xl-desktop;
     }
@@ -40,9 +44,11 @@ h3 {
     font-size: vars.$size-md-mobile;
     font-weight: vars.$weight-bold;
     line-height: 1.3;
+
     @include mx.breakpoint('medium') {
         font-size: vars.$size-body-tablet;
     }
+
     @include mx.breakpoint('extra-large') {
         font-size: vars.$size-2xl-desktop;
     }

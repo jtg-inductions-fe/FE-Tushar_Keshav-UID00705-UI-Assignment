@@ -2,12 +2,7 @@
 .footer {
     &__container {
         border-top: vars.px-to-rem(1px) solid vars.$silver;
-        @include vars.padding(
-            $top: 16px,
-            $right: 24px,
-            $bottom: 24px,
-            $left: 24px
-        );
+        @include vars.padding(16px);
 
         @include vars.breakpoint('medium') {
             @include vars.padding($top: 56px, $right: 24px);
