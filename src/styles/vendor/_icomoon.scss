@@ -33,14 +33,16 @@
     content: '\e900';
     font-size: px-to-rem(36px);
     padding: px-to-rem(4px) px-to-rem(8px) px-to-rem(8px) px-to-rem(8px);
-    color: #002f52;
+    color: $color-primary;
 }
 .icon-mail:before {
     content: '\e901';
+    color: $color-primary;
+    font-size: px-to-rem(16px);
 }
 .icon-heart:before {
     content: '\e902';
-    color: #002f52;
+    color: $color-primary;
     padding: px-to-rem(8px);
     font-size: px-to-rem(32px);
 }
@@ -48,15 +50,15 @@
     content: '\e903';
     font-size: px-to-rem(32px);
     padding: px-to-rem(8px);
-    color: #002f52;
+    color: $color-primary;
 }
 .icon-search:before {
     content: '\e904';
     font-size: px-to-rem(18px);
-    color: #fff;
+    color: $white;
 }
 .icon-Menu:before {
     content: '\e905';
     font-size: px-to-rem(24px);
-    color: var(--icon-color, #002f52);
+    color: var(--icon-color, $color-primary);
 }
