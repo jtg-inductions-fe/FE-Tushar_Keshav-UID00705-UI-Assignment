@@ -2,12 +2,14 @@
 .swiper {
     width: 100%;
     position: relative;
+
     @include vars.breakpoint('medium') {
         width: vars.px-to-rem(726px);
         padding: 0 vars.px-to-rem(60px);
         height: vars.px-to-rem(360px);
     }
 }
+
 .swiper-wrapper {
     @include vars.padding(24px);
     gap: vars.px-to-rem(24px);
@@ -17,17 +19,21 @@
         top: vars.px-to-rem(60px);
     }
 }
+
 .swiper-container {
     position: relative;
 }
+
 .slider-section {
     &__title {
         @include vars.flex-box($justify-content: center, $align-items: center);
         @include vars.padding($top: 24px, $bottom: 12px);
+
         @include vars.breakpoint('medium') {
             padding-top: vars.px-to-rem(64px);
         }
     }
+
     &__content {
         background-color: vars.$gray-200;
         position: relative;
@@ -42,6 +48,7 @@
             padding-top: vars.px-to-rem(40px);
             gap: vars.px-to-rem(60px);
         }
+
         @include vars.breakpoint('extra-large') {
             @include vars.flex-box(
                 $gap-value: 120px,
@@ -52,6 +59,7 @@
         }
     }
 }
+
 .swiper-slide {
     width: auto !important;
     height: vars.px-to-rem(248px) !important;
@@ -61,15 +69,18 @@
         height: 100%;
         pointer-events: none;
     }
+
     @include vars.breakpoint('medium') {
         width: vars.px-to-rem(192px) !important;
         height: vars.px-to-rem(266px) !important;
     }
+
     @include vars.breakpoint('medium') {
         width: vars.px-to-rem(192px) !important;
         height: vars.px-to-rem(266px) !important;
     }
 }
+
 .swiper-pagination {
     --swiper-pagination-bullet-width: #{vars.px-to-rem(8px)};
     --swiper-pagination-bullet-height: #{vars.px-to-rem(8px)};
@@ -89,24 +100,29 @@
         --swiper-pagination-bullet-horizontal-gap: #{vars.px-to-rem(6px)};
     }
 }
+
 .carousel-nav__btn {
     position: absolute;
     top: 68%;
     transform: translateY(-50%);
     cursor: pointer;
     z-index: 10;
-    @include vars.padding(10px);
     display: none;
+    @include vars.padding(10px);
+
     &--prev {
         left: vars.px-to-rem(-50px);
     }
+
     &--next {
         right: vars.px-to-rem(-50px);
     }
+
     @include vars.breakpoint('medium') {
         display: block;
     }
 }
+
 .card {
     @include vars.padding(20px, 16px, 24px, 12px);
     @include vars.flex-box($flex-direction: row, $gap-value: 16px);
@@ -124,10 +140,12 @@
             $gap-value: 12px
         );
         flex-grow: 1;
+
         & > p {
             line-height: 1.5;
         }
     }
+
     &__left {
         @include vars.flex-box(
             $flex-direction: column,
@@ -138,6 +156,7 @@
         flex-basis: 54%;
         flex-grow: 1;
     }
+
     &__heading {
         color: vars.$orange-500;
         line-height: 1.5;
@@ -145,6 +164,7 @@
             font-size: vars.$size-2xl-desktop;
         }
     }
+
     &__right {
         @include vars.flex-box(
             $flex-direction: column,
@@ -152,18 +172,22 @@
             $gap-value: 16px
         );
     }
+
     &__image {
         width: 100%;
         flex-grow: 1;
         @include vars.flex-box($align-items: start, $justify-content: center);
+
         & > img {
             width: 100%;
             max-width: vars.px-to-rem(162px);
         }
+
         @include vars.breakpoint('medium') {
             width: vars.px-to-rem(146px);
         }
     }
+
     &__icons {
         @include vars.flex-box(
             $justify-content: start,
