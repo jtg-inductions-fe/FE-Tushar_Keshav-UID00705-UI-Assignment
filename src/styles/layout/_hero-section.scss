@@ -1,0 +1,78 @@
+@use '../abstracts/' as vars;
+
+.hero-section {
+    height: vars.px-to-rem(216px);
+    width: 100%;
+    background: vars.$primary-gradient;
+    text-align: center;
+    color: vars.$white;
+    @include vars.flex-box(
+        $flex-direction: column,
+        $align-items: center,
+        $justify-content: center,
+        $gap-value: 24px
+    );
+    @include vars.padding($top: 36px, $right: 24px);
+
+    @include vars.breakpoint('medium') {
+        height: vars.px-to-rem(332px);
+    }
+
+    &__text {
+        @include vars.flex-box(
+            $flex-direction: column,
+            $align-items: center,
+            $gap-value: 16px
+        );
+
+        @include vars.breakpoint('medium') {
+            gap: vars.px-to-rem(12px);
+            @include vars.padding(8px);
+        }
+    }
+
+    &__search {
+        border-radius: vars.px-to-rem(24px);
+        border: vars.px-to-rem(1px) solid vars.$white;
+        max-width: 100%;
+        box-sizing: border-box;
+        @include vars.flex-box(
+            $align-items: center,
+            $justify-content: center,
+            $gap-value: 10px
+        );
+        @include vars.padding(12px);
+        @include vars.breakpoint('medium') {
+            height: vars.px-to-rem(56px);
+            width: vars.px-to-rem(476px);
+        }
+        @include vars.breakpoint('large') {
+            width: vars.px-to-rem(586px);
+        }
+    }
+
+    &__subtext {
+        text-wrap: balance;
+        white-space: normal;
+        text-align: center;
+        font-size: vars.$size-md-mobile;
+        font-weight: vars.$weight-semibold;
+        font-family: vars.$font-family;
+        line-height: 1.5;
+        text-box-trim: trim-both;
+    }
+}
+
+.hero-search {
+    background-color: vars.$transparent;
+    border: none;
+    outline: none;
+    box-sizing: border-box;
+    max-width: 90%;
+    &::placeholder {
+        font-family: vars.$font-family;
+        padding: vars.px-to-rem(4px);
+        color: inherit;
+        display: inline;
+    }
+}

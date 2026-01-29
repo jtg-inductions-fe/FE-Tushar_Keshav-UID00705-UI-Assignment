@@ -3,6 +3,7 @@
 %item-hover {
     transition: opacity 0.25s ease;
     opacity: 1;
+
     &:hover,
     &:focus-visible {
         opacity: 0.7;
@@ -38,6 +39,7 @@
 
     &__hamburger {
         background: vars.$white;
+        cursor: pointer;
         @include vars.flex-box($align-items: center, $justify-content: center);
         @include vars.padding($top: 28px, $right: 24px);
 
@@ -122,6 +124,7 @@
             color: vars.$black;
         }
     }
+
     &__item--favoritos {
         display: none;
 
@@ -129,6 +132,7 @@
             display: inline;
         }
     }
+
     &__link {
         text-wrap: nowrap;
         display: inline-block;
@@ -173,11 +177,11 @@
             }
         }
     }
+
     &__link {
         display: inline-block;
         @include vars.padding(24px, 132px, 8px, 24px);
         width: 100%;
-
         background: vars.$primary-gradient;
         -webkit-background-clip: text;
         background-clip: text;
@@ -190,6 +194,7 @@
         @extend %item-hover;
     }
 }
+
 .has-sub-menu {
     position: relative;
 
@@ -198,6 +203,7 @@
             background: vars.$primary-gradient;
             color: vars.$white;
         }
+
         .sub-menu {
             @include vars.flex-box($flex-direction: column);
         }
@@ -223,12 +229,12 @@
     font-family: vars.$font-brand;
     font-size: vars.px-to-rem(30px);
     font-weight: vars.$weight-regular;
+    @include vars.breakpoint('medium') {
+        display: inline;
+    }
 
     > span {
         font-weight: vars.$weight-bold;
-    }
-    @include vars.breakpoint('medium') {
-        display: inline;
     }
 }
 
