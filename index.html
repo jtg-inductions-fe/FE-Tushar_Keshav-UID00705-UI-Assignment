@@ -13,8 +13,7 @@
                     <div class="header__group">
                         <button
                             class="header__hamburger"
-                            aria-label="menu-button"
-                            tabindex="0"
+                            aria-label="menu button"
                         >
                             <span class="icon-Menu"></span>
                         </button>
@@ -29,7 +28,7 @@
                             </div>
                         </div>
                     </div>
-                    <nav class="header__nav" id="main-nav" aria-label="Menu">
+                    <nav class="header__nav" id="main-nav" aria-label="menu">
                         <ul class="main-menu">
                             <li class="main-menu__item has-sub-menu is-open">
                                 <a href="#" class="main-menu__link categories"
@@ -81,17 +80,17 @@
                 <nav
                     class="header__actions"
                     id="secondary-nav"
-                    aria-label="User Actions"
+                    aria-label="user actions"
                 >
-                    <a href="#" class="action-btn heart" aria-label="Favoritos">
+                    <a href="#" class="action-btn heart" aria-label="favoritos">
                         <span class="icon-heart"></span>
                         <span class="action-btn__text">Favoritos</span>
                     </a>
-                    <a href="#" class="action-btn" aria-label="Minha sacola">
+                    <a href="#" class="action-btn" aria-label="minha sacola">
                         <span class="icon-bag"></span>
                         <span class="action-btn__text">Minha sacola</span>
                     </a>
-                    <a href="#" class="action-btn" aria-label="Meu perfil">
+                    <a href="#" class="action-btn" aria-label="meu perfil">
                         <span class="icon-profile"></span>
                         <span class="action-btn__text">Meu perfil</span>
                     </a>
@@ -100,7 +99,7 @@
             <!-- End of Header Section-->
 
             <!--  Hero Section  -->
-            <section class="hero-section" aria-label="hero-section">
+            <section class="hero-section" aria-label="hero section">
                 <div class="hero-section__text">
                     <h1 class="hero-section__title">
                         Já sabe por onde começar?
@@ -115,7 +114,7 @@
                     <input
                         type="text"
                         class="hero-search"
-                        aria-label="Search books"
+                        aria-label="search books"
                         placeholder="Qual será sua próxima leitura?"
                     />
                 </form>
@@ -123,7 +122,7 @@
             <!--  End of Hero Section  -->
 
             <!-- Slider Section 1  -->
-            <section class="slider-section" aria-label="latest-release">
+            <section class="slider-section" aria-label="latest release">
                 <div class="slider-section__title">
                     <h2 class="section-title__text">ÚLTIMOS LANÇAMENTOS</h2>
                 </div>
@@ -243,7 +242,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="card">
+                    <div class="card" aria-label="card">
                         <div class="card__left">
                             <div class="card__content">
                                 <h3 class="card__heading">
@@ -258,10 +257,18 @@
                                 </p>
                             </div>
                             <div class="card__icons">
-                                <a href="#" class="card__icon">
+                                <a
+                                    href="#"
+                                    class="card__icon"
+                                    aria-label="favorite"
+                                >
                                     <span class="icon-heart"></span>
                                 </a>
-                                <a href="#" class="card__icon">
+                                <a
+                                    href="#"
+                                    class="card__icon"
+                                    aria-label="cart"
+                                >
                                     <span class="icon-bag"></span>
                                 </a>
                             </div>
@@ -283,68 +290,67 @@
             <!--  Recently Visited Topics Section  -->
             <section
                 class="recently-visited"
-                aria-label="recently-visited-topics-section"
-                role="tablist"
+                aria-label="recently visited topics section"
             >
                 <h3 class="recently-visited__title">
                     TÓPICOS VISITADOS RECENTEMENTE
                 </h3>
                 <nav
                     class="recently-visited__topics"
-                    aria-label="recently-visited-topics"
+                    aria-label="recently visited topics list"
                 >
                     <div
-                        class="recently-visited__topic recently-visited__btn--first"
-                        aria-label="View topics about Android"
+                        class="recently-visited__topic recently-visited__topic--first"
+                        aria-label="view topics about android"
                         tabindex="0"
                     >
                         Android
                     </div>
                     <div
                         class="recently-visited__topic"
-                        aria-label="View topics about Marketing Digital"
+                        aria-label="view topics about marketing digital"
                         tabindex="0"
                     >
                         Marketing Digital
                     </div>
                     <div
                         class="recently-visited__topic"
-                        aria-label="View topics about Agile"
+                        aria-label="view topics about agile"
                         tabindex="0"
                     >
                         Agile
                     </div>
                     <div
                         class="recently-visited__topic"
-                        aria-label="View topics about Startups"
+                        aria-label="view topics about startups"
                         tabindex="0"
                     >
                         Startups
                     </div>
                     <div
                         class="recently-visited__topic"
-                        aria-label="View topics about HTML & CSS"
+                        aria-label="view topics about html & css"
                         tabindex="0"
                     >
                         HTML & CSS
                     </div>
                     <div
                         class="recently-visited__topic"
-                        aria-label="View topics about Python"
+                        aria-label="view topics about python"
                         tabindex="0"
                     >
                         Python
                     </div>
                     <div
-                        class="recently-visited__topic recently-visited__btn--second"
-                        aria-label="View topics about OO"
+                        class="recently-visited__topic recently-visited__topic--second"
+                        aria-label="view topics about oo"
                         tabindex="0"
                     >
                         OO
                     </div>
                     <div
                         class="recently-visited__topic"
-                        aria-label="View topics about Java"
+                        aria-label="view topics about java"
                         tabindex="0"
                     >
                         Java
@@ -370,6 +376,7 @@
                         <input
                             type="text"
                             class="email-input"
+                            aria-label="subscribe to newsletter"
                             placeholder="Cadastre seu e-mail?"
                         />
                     </form>
@@ -382,162 +389,205 @@
                 <div class="footer__container">
                     <div class="footer__partner">Group Alura</div>
                     <div class="footer__list">
-                        <nav class="footer__item">
+                        <nav
+                            class="footer__item"
+                            aria-label="EDUCAÇÃO navigation"
+                        >
                             <h4 class="footer-column__title labels">
                                 EDUCAÇÃO
                             </h4>
                             <ul class="footer-column__list">
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-caelum.png"
-                                        alt="Caelum"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels">Caelum</span>
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer-caelum.png"
+                                            alt="Caelum"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels">Caelum</span>
+                                    </a>
                                 </li>
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-casa-do-codigo.png"
-                                        alt="Casa do Código"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels">Casa do Código</span>
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer-casa-do-codigo.png"
+                                            alt="Casa do Código"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels"
+                                            >Casa do Código</span
+                                        >
+                                    </a>
                                 </li>
                             </ul>
                         </nav>
-                        <nav class="footer__item">
+                        <nav
+                            class="footer__item"
+                            aria-label="EDUCAÇÃO ONLINE navigation"
+                        >
                             <h4 class="footer-column__title labels">
                                 EDUCAÇÃO ONLINE
                             </h4>
                             <ul class="footer-column__list">
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-alura.png"
-                                        alt="Alura"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels">Alura </span>
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer-alura.png"
+                                            alt="Alura"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels">Alura </span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer-alura-empresas.png"
+                                            alt="Alura Para Empresas"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels"
+                                            >Alura Para Empresas</span
+                                        >
+                                    </a>
                                 </li>
                                 <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-alura-empresas.png"
-                                        alt="Alura Para Empresas"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels"
-                                        >Alura Para Empresas</span
-                                    >
+                                    <a href="#">
+                                        <img
+                                            src="/assets/images/footer-alura-latam.png"
+                                            alt="Alura LATAM"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels"> Alura LATAM</span>
+                                    </a>
                                 </li>
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-alura-latam.png"
-                                        alt="Alura LATAM"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels"> Alura LATAM</span>
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer-alura-start.png"
+                                            alt="Alura Start"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels">Alura Start</span>
+                                    </a>
                                 </li>
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-alura-start.png"
-                                        alt="Alura Start"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels">Alura Start</span>
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer-music-dot.png"
+                                            alt="MusicDot"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels">MusicDot</span>
+                                    </a>
                                 </li>
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-music-dot.png"
-                                        alt="MusicDot"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels">MusicDot</span>
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer-alura-lingua.png"
+                                            alt="Alura Língua"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels">Alura Língua</span>
+                                    </a>
                                 </li>
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-alura-lingua.png"
-                                        alt="Alura Língua"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels">Alura Língua</span>
-                                </li>
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-pm3.png"
-                                        alt="PM3"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels">PM3</span>
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer-pm3.png"
+                                            alt="PM3"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels">PM3</span>
+                                    </a>
                                 </li>
                             </ul>
                         </nav>
-                        <nav class="footer__item">
+                        <nav
+                            class="footer__item"
+                            aria-label="COMUNIDADE navigation"
+                        >
                             <h4 class="footer-column__title labels">
                                 COMUNIDADE
                             </h4>
                             <ul class="footer-column__list">
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-hipsters-tech.png"
-                                        alt="Hipsters ponto Tech"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels"
-                                        >Hipsters ponto Tech</span
-                                    >
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer-hipsters-tech.png"
+                                            alt="Hipsters ponto Tech"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels"
+                                            >Hipsters ponto Tech</span
+                                        >
+                                    </a>
                                 </li>
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer--scuba.png"
-                                        alt="Scuba Dev"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels">Scuba Dev</span>
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer--scuba.png"
+                                            alt="Scuba Dev"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels">Scuba Dev</span>
+                                    </a>
                                 </li>
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-layers.png"
-                                        alt="Layers ponto Tech"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels"
-                                        >Layers ponto Tech</span
-                                    >
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer-layers.png"
+                                            alt="Layers ponto Tech"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels"
+                                            >Layers ponto Tech</span
+                                        >
+                                    </a>
                                 </li>
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-like-a-boss.png"
-                                        alt="Like a Boss"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels">Like a Boss</span>
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer-like-a-boss.png"
+                                            alt="Like a Boss"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels">Like a Boss</span>
+                                    </a>
                                 </li>
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-carreira-sem-fronteira.png"
-                                        alt="Carreira sem Fronteira"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels"
-                                        >Carreira sem Fronteira</span
-                                    >
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer-carreira-sem-fronteira.png"
+                                            alt="Carreira sem Fronteira"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels"
+                                            >Carreira sem Fronteira</span
+                                        >
+                                    </a>
                                 </li>
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-hipsters-jobs.png"
-                                        alt="Hipsters ponto Jobs"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels"
-                                        >Hipsters ponto Jobs</span
-                                    >
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer-hipsters-jobs.png"
+                                            alt="Hipsters ponto Jobs"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels"
+                                            >Hipsters ponto Jobs</span
+                                        >
+                                    </a>
                                 </li>
-                                <li class="footer-column__item">
-                                    <img
-                                        src="/assets/images/footer-guj.png"
-                                        alt="GUJ"
-                                        loading="lazy"
-                                    />
-                                    <span class="labels">GUJ</span>
+                                <li>
+                                    <a href="#" class="footer-column__item">
+                                        <img
+                                            src="/assets/images/footer-guj.png"
+                                            alt="GUJ"
+                                            loading="lazy"
+                                        />
+                                        <span class="labels">GUJ</span>
+                                    </a>
                                 </li>
                             </ul>
                         </nav>

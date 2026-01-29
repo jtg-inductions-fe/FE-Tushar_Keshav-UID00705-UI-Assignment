@@ -77,6 +77,8 @@
         @include vars.breakpoint('large') {
             gap: vars.px-to-rem(24px);
         }
+
+        @extend %item-hover;
     }
 
     & > img {

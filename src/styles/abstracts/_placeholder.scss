@@ -1,0 +1,8 @@
+%item-hover {
+    transition: opacity 0.25s ease;
+    opacity: 1;
+
+    &:hover {
+        opacity: 0.65;
+    }
+}

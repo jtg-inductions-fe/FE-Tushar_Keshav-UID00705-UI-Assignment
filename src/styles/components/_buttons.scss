@@ -6,4 +6,6 @@
     color: vars.$white;
     font-weight: vars.$weight-bold;
     font-size: vars.$size-md-mobile;
+
+    @extend %item-hover;
 }

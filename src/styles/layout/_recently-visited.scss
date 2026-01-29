@@ -54,5 +54,7 @@
         &--second {
             order: -1;
         }
+
+        @extend %item-hover;
     }
 }

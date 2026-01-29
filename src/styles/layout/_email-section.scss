@@ -6,6 +6,7 @@
     width: 100%;
 
     &__container {
+        max-width: 100%;
         @include vars.flex-box(
             $flex-direction: column,
             $gap-value: 24px,

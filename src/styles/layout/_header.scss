@@ -1,15 +1,5 @@
 @use '../abstracts' as vars;
 
-%item-hover {
-    transition: opacity 0.25s ease;
-    opacity: 1;
-
-    &:hover,
-    &:focus-visible {
-        opacity: 0.7;
-    }
-}
-
 .header {
     background-color: vars.$white;
     position: sticky;
@@ -70,6 +60,8 @@
             padding-left: vars.px-to-rem(76px);
             gap: vars.px-to-rem(16px);
         }
+
+        @extend %item-hover;
     }
 
     &__actions {
@@ -221,6 +213,8 @@
             display: inline-block;
         }
     }
+
+    @extend %item-hover;
 }
 
 .brand-name {

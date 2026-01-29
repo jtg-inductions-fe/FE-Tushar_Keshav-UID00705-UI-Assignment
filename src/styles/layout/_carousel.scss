@@ -22,6 +22,7 @@
 
 .swiper-container {
     position: relative;
+    max-width: 100%;
 }
 
 .slider-section {
@@ -121,6 +122,8 @@
     @include vars.breakpoint('medium') {
         display: block;
     }
+
+    @extend %item-hover;
 }
 
 .card {
@@ -194,5 +197,7 @@
             $align-items: center,
             $gap-value: 12px
         );
+
+        @extend %item-hover;
     }
 }
