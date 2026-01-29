@@ -1,7 +1,0 @@
-@use '../abstracts/' as vars;
-.recently-visited {
-    @include vars.padding(24px, 16px);
-}
-.recently-visited__topics {
-    @include vars.padding($top: 32px);
-}
