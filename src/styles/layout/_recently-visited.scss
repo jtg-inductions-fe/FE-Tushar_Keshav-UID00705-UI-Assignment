@@ -1,4 +1,5 @@
 @use '../abstracts/' as vars;
+
 .recently-visited {
     background: vars.$primary-gradient;
     @include vars.flex-box(
@@ -19,6 +20,7 @@
     &__title {
         color: vars.$white;
         font-weight: vars.$weight-light;
+
         @include vars.breakpoint('medium') {
             font-size: vars.$size-lg-tablet;
         }
@@ -36,7 +38,7 @@
         background-color: vars.$orange-500;
         color: vars.$white;
         cursor: pointer;
-
+        margin: vars.px-to-rem(7px);
         font-size: vars.$size-sm-mobile;
         @include vars.padding(16px, 24px);
 
@@ -44,16 +46,13 @@
             font-size: vars.$size-lg-tablet;
             @include vars.padding(24px, 32px);
         }
-        margin: 7px;
 
         &--first {
             order: -2;
         }
+
         &--second {
             order: -1;
         }
     }
-}
-
-.large-btn {
 }
