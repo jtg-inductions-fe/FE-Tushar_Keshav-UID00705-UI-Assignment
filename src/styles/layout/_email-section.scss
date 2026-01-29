@@ -1,0 +1,64 @@
+@use '../abstracts/' as vars;
+
+.email-section {
+    @include vars.padding($top: 24px, $bottom: 30px);
+    @include vars.flex-box(
+        $flex-direction: column,
+        $gap-value: 24px,
+        $align-items: center
+    );
+
+    @include vars.breakpoint('medium') {
+        @include vars.padding($top: 30px, $right: 150px, $bottom: 54px);
+        flex-direction: row;
+        justify-content: center;
+        gap: 0;
+    }
+    &__content {
+        @include vars.flex-box($flex-direction: column, $gap-value: 8px);
+        @include vars.breakpoint('medium') {
+            flex-basis: 50%;
+            gap: vars.px-to-rem(20px);
+        }
+    }
+
+    &__title {
+        font-size: vars.$size-lg-mobile;
+        font-weight: vars.$weight-semibold;
+        color: vars.$color-primary;
+        line-height: 1.5;
+        @include vars.breakpoint('medium') {
+            font-size: vars.$size-lg-tablet;
+        }
+    }
+    &__sub-text {
+        width: 90%;
+        font-weight: vars.$weight-light;
+        line-height: 1.5;
+    }
+
+    &__email-bar {
+        border-radius: vars.px-to-rem(24px);
+        border: vars.px-to-rem(1px) solid vars.$color-primary;
+        width: 100%;
+        @include vars.padding(10px, 24px);
+        @include vars.flex-box($gap-value: 12px, $align-items: center);
+        max-width: vars.px-to-rem(350px);
+        @include vars.breakpoint('medium') {
+            flex-basis: 50%;
+            margin: vars.px-to-rem(44px) vars.px-to-rem(20px);
+        }
+    }
+    @include vars.breakpoint('medium') {
+        flex-direction: row;
+    }
+}
+.email-input {
+    background-color: vars.$transparent;
+    border: none;
+    outline: none;
+    &::placeholder {
+        color: vars.$color-primary;
+        font-size: vars.$size-md-mobile;
+    }
+}
