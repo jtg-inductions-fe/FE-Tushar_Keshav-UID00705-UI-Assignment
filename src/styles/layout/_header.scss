@@ -39,6 +39,7 @@
 
     &__hamburger {
         background: vars.$white;
+        cursor: pointer;
         @include vars.flex-box($align-items: center, $justify-content: center);
         @include vars.padding($top: 28px, $right: 24px);
 

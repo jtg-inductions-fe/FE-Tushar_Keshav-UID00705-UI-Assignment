@@ -34,9 +34,8 @@
     &__search {
         border-radius: vars.px-to-rem(24px);
         border: vars.px-to-rem(1px) solid vars.$white;
-        width: 100%;
+        max-width: 100%;
         box-sizing: border-box;
-
         @include vars.flex-box(
             $align-items: center,
             $justify-content: center,
@@ -68,10 +67,12 @@
     background-color: vars.$transparent;
     border: none;
     outline: none;
-
+    box-sizing: border-box;
+    max-width: 90%;
     &::placeholder {
         font-family: vars.$font-family;
-        padding-left: 0.25rem;
+        padding: vars.px-to-rem(4px);
         color: inherit;
+        display: inline;
     }
 }
