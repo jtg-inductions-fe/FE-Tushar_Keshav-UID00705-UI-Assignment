@@ -1,33 +1,6 @@
 @use '../abstracts' as vars;
 
-$btn-padding-mobile: vars.px-to-rem(48px) vars.px-to-rem(32px);
-$btn-padding-tablet: vars.px-to-rem(64px) vars.px-to-rem(48px);
-$btn-padding-desktop: vars.px-to-rem(64px) vars.px-to-rem(48px);
-
-$btn-font-mobile: vars.px-to-rem(14px);
-$btn-font-tablet: vars.px-to-rem(24px);
-$btn-font-desktop: vars.px-to-rem(24px);
-
 .btn {
-    @include vars.padding($top: 12px, $right: 16px);
-    background-color: vars.$orange-500;
-    color: vars.$white;
-    cursor: pointer;
-
-    font-size: $btn-font-mobile;
-    padding: $btn-padding-mobile;
-
-    @include vars.breakpoint('medium') {
-        font-size: $btn-font-tablet;
-        padding: $btn-padding-tablet;
-    }
-
-    @include vars.breakpoint('large') {
-        font-size: $btn-font-desktop;
-        padding: $btn-padding-desktop;
-    }
-}
-.small-btn {
     @include vars.padding($top: 12px, $right: 16px);
     background-color: vars.$orange-500;
     color: vars.$white;

@@ -66,9 +66,6 @@ h3 {
 
 .labels {
     font-size: vars.$size-sm-mobile;
-    font-weight: vars.$weight-light;
-
-    @include mx.breakpoint('medium') {
-        font-size: vars.$size-sm-mobile;
-    }
+    font-weight: vars.$weight-regular;
+    color: vars.$label-color;
 }
