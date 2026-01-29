@@ -51,6 +51,7 @@
             width: vars.px-to-rem(586px);
         }
     }
+
     &__subtext {
         text-wrap: balance;
         white-space: normal;
@@ -67,6 +68,7 @@
     background-color: vars.$transparent;
     border: none;
     outline: none;
+
     &::placeholder {
         font-family: vars.$font-family;
         padding-left: 0.25rem;
