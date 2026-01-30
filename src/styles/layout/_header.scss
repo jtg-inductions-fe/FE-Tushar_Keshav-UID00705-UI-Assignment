@@ -1,15 +1,5 @@
 @use '../abstracts' as vars;
 
-%item-hover {
-    transition: opacity 0.25s ease;
-    opacity: 1;
-
-    &:hover,
-    &:focus-visible {
-        opacity: 0.7;
-    }
-}
-
 .header {
     background-color: vars.$white;
     position: sticky;
@@ -70,6 +60,8 @@
             padding-left: vars.px-to-rem(76px);
             gap: vars.px-to-rem(16px);
         }
+
+        @extend %item-hover;
     }
 
     &__actions {
@@ -137,18 +129,18 @@
         text-wrap: nowrap;
         display: inline-block;
         width: 100%;
-
         @include vars.padding(24px, 132px, 16px, 24px);
 
         @include vars.breakpoint('medium') {
             @include vars.padding(12px, 32px, 12px, 12px);
         }
+
         @extend %item-hover;
     }
 
     @include vars.breakpoint('medium') {
-        @include vars.flex-box($align-items: center, $justify-content: start);
         flex-grow: 1;
+        @include vars.flex-box($align-items: center, $justify-content: start);
     }
 }
 
@@ -156,18 +148,15 @@
     all: initial;
     display: none;
     background-color: vars.$white;
-    @include vars.breakpoint('medium') {
-        position: absolute;
-        top: 100%;
-        left: 0;
-    }
 
     &__item {
         all: unset;
         width: 100%;
+
         @include vars.breakpoint('medium') {
             &:hover {
                 background: vars.$primary-gradient;
+
                 .sub-menu__link {
                     background: none;
                     color: vars.$white;
@@ -193,19 +182,25 @@
         }
         @extend %item-hover;
     }
+
+    @include vars.breakpoint('medium') {
+        position: absolute;
+        top: 100%;
+        left: 0;
+    }
 }
 
 .has-sub-menu {
     position: relative;
 
     &:hover {
+        .sub-menu {
+            @include vars.flex-box($flex-direction: column);
+        }
+
         @include vars.breakpoint('medium') {
             background: vars.$primary-gradient;
             color: vars.$white;
-        }
-
-        .sub-menu {
-            @include vars.flex-box($flex-direction: column);
         }
     }
 }
@@ -217,10 +212,13 @@
         display: none;
         text-align: center;
         font-size: vars.px-to-rem(20px);
+
         @include vars.breakpoint('large') {
             display: inline-block;
         }
     }
+
+    @extend %item-hover;
 }
 
 .brand-name {
@@ -229,12 +227,13 @@
     font-family: vars.$font-brand;
     font-size: vars.px-to-rem(30px);
     font-weight: vars.$weight-regular;
-    @include vars.breakpoint('medium') {
-        display: inline;
-    }
 
     > span {
         font-weight: vars.$weight-bold;
+    }
+
+    @include vars.breakpoint('medium') {
+        display: inline;
     }
 }
 

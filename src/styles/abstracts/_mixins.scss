@@ -38,3 +38,12 @@
     flex-direction: $flex-direction;
     gap: px-to-rem($gap-value);
 }
+
+/// A mixin for line clamping.
+/// @param {Number} $line-clamp - clamp after these number of values
+@mixin line-clamp($line-clamp: 1) {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: $line-clamp;
+    overflow: hidden;
+}

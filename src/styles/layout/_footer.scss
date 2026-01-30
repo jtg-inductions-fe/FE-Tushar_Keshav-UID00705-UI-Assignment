@@ -1,0 +1,83 @@
+@use '../abstracts/' as vars;
+.footer {
+    &__container {
+        border-top: vars.px-to-rem(1px) solid vars.$silver;
+        @include vars.padding(16px);
+
+        @include vars.breakpoint('medium') {
+            @include vars.padding($top: 56px, $right: 24px);
+            @include vars.flex-box($gap-value: 106px, $justify-content: center);
+        }
+
+        @include vars.breakpoint('large') {
+            gap: vars.px-to-rem(120px);
+        }
+    }
+
+    &__partner {
+        text-wrap: nowrap;
+        font-size: vars.$size-md-mobile;
+
+        @include vars.breakpoint('medium') {
+            font-size: vars.$size-lg-tablet;
+        }
+    }
+
+    &__item {
+        @include vars.flex-box(
+            $flex-direction: column,
+            $align-items: start,
+            $gap-value: 26px
+        );
+
+        @include vars.breakpoint('large') {
+            border-left: vars.px-to-rem(1px) solid vars.$silver;
+            @include vars.padding(20px);
+        }
+    }
+
+    &__list {
+        display: none;
+
+        @include vars.breakpoint('medium') {
+            @include vars.flex-box($flex-direction: row, $gap-value: 60px);
+        }
+
+        @include vars.breakpoint('large') {
+            gap: vars.px-to-rem(168px);
+        }
+    }
+}
+
+.footer-column {
+    &__title {
+        color: vars.$silver;
+    }
+
+    &__list {
+        @include vars.flex-box(
+            $flex-direction: column,
+            $justify-content: start,
+            $gap-value: 16px
+        );
+    }
+
+    &__item {
+        @include vars.flex-box(
+            $justify-content: start,
+            $align-items: center,
+            $gap-value: 8px
+        );
+
+        @include vars.breakpoint('large') {
+            gap: vars.px-to-rem(24px);
+        }
+
+        @extend %item-hover;
+    }
+
+    & > img {
+        height: vars.px-to-rem(32px);
+        width: vars.px-to-rem(32px);
+    }
+}

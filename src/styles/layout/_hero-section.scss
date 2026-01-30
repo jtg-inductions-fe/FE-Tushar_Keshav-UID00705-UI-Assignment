@@ -14,10 +14,6 @@
     );
     @include vars.padding($top: 36px, $right: 24px);
 
-    @include vars.breakpoint('medium') {
-        height: vars.px-to-rem(332px);
-    }
-
     &__text {
         @include vars.flex-box(
             $flex-direction: column,
@@ -62,6 +58,11 @@
         font-family: vars.$font-family;
         line-height: 1.5;
         text-box-trim: trim-both;
+        @include vars.line-clamp(2);
+    }
+
+    @include vars.breakpoint('medium') {
+        height: vars.px-to-rem(332px);
     }
 }
 

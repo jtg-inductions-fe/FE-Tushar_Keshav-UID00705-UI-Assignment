@@ -11,15 +11,14 @@ new Swiper('.swiper', {
     modules: [Pagination, Navigation],
     direction: 'horizontal',
     slidesPerView: 'auto',
-    spaceBetween: 20,
     centeredSlides: true,
     loop: true,
     freeMode: true,
+    autoHeight: false,
 
     breakpoints: {
         1024: {
             slidesPerView: 3,
-            spaceBetween: 75,
             navigation: {
                 enabled: true,
             },
@@ -29,7 +28,7 @@ new Swiper('.swiper', {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true,
-        renderBullet: function (index, className) {
+        renderBullet: function (_, className) {
             return '<span class="' + className + '">' + '</span>';
         },
     },
