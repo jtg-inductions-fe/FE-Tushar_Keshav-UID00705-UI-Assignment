@@ -28,9 +28,6 @@ new Swiper('.swiper', {
         el: '.swiper-pagination',
         type: 'bullets',
         clickable: true,
-        renderBullet: function (_, className) {
-            return '<span class="' + className + '">' + '</span>';
-        },
     },
     navigation: {
         prevEl: '.carousel-nav__btn--prev',
